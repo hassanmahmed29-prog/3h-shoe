@@ -1,0 +1,1830 @@
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مصنع 3H لتصنيع الأحذية | متجر 3H الرسمي</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+tailwind.config={theme:{extend:{fontFamily:{cairo:['Cairo','Tajawal','sans-serif']},colors:{brand:{50:'#fffbeb',100:'#fef3c7',500:'#f59e0b',600:'#d97706',700:'#b45309',900:'#78350f'},ink:{900:'#0B0B12',800:'#13131d',700:'#1e1e2b'}},boxShadow:{luxe:'0 20px 60px -15px rgba(0,0,0,.35)',glow:'0 0 40px -10px rgba(245,158,11,.6)'}}}};
+</script>
+<style>
+:root{--accent:#f59e0b;--accent2:#ef4444}
+*{font-family:'Cairo',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#FAF7F1;color:#13131d;overflow-x:hidden}
+::-webkit-scrollbar{width:10px;height:8px}
+::-webkit-scrollbar-track{background:#eee}
+::-webkit-scrollbar-thumb{background:linear-gradient(#f59e0b,#b45309);border-radius:20px}
+.loader{position:fixed;inset:0;z-index:200;background:#0B0B12;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:.6s}
+.loader.hide{opacity:0;pointer-events:none}
+.loader-logo{font-size:72px;font-weight:900;background:linear-gradient(135deg,#fff 20%,#f59e0b 50%,#fff 80%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shine 2s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.spin-ring{width:58px;height:58px;border:4px solid #2a2a35;border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-slide{position:absolute;inset:0;opacity:0;transform:scale(1.06);transition:opacity 1s ease,transform 6s ease}
+.hero-slide.active{opacity:1;transform:scale(1);z-index:2}
+.glass{background:rgba(255,255,255,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.glass-dark{background:rgba(11,11,18,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.card-hover{transition:.4s cubic-bezier(.2,.8,.2,1)}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 25px 60px -15px rgba(0,0,0,.28)}
+.btn-shine{position:relative;overflow:hidden}
+.btn-shine::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:.6s}
+.btn-shine:hover::after{left:130%}
+.reveal{opacity:0;transform:translateY(40px);transition:.8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.marquee-wrap{direction:ltr}
+.marquee{display:flex;gap:36px;animation:marq 26s linear infinite;width:max-content;direction:ltr}
+@keyframes marq{to{transform:translateX(-50%)}}
+.float-anim{animation:floaty 4s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(-3deg)}}
+.shoe-shadow{filter:drop-shadow(0 30px 30px rgba(0,0,0,.45))}
+.fab-item{transition:.35s}
+.fab-item:hover{transform:translateX(-6px) scale(1.08)}
+.drawer{transition:.5s cubic-bezier(.2,.8,.2,1)}
+.tab-btn.active{background:#0B0B12!important;color:#f59e0b!important;border-color:#0B0B12!important}
+.admin-tab.active{background:linear-gradient(135deg,#f59e0b,#b45309)!important;color:#fff!important}
+input,textarea,select{outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(245,158,11,.2)}
+.size-btn.active{background:#0B0B12!important;color:#fff!important;border-color:#0B0B12!important}
+.color-dot{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer;transition:.2s}
+.color-dot.active{outline:3px solid var(--accent);outline-offset:2px;transform:scale(1.1)}
+.toast{animation:toastIn .4s cubic-bezier(.2,.8,.2,1)}
+@keyframes toastIn{from{transform:translateY(20px) scale(.9);opacity:0}}
+.pattern-bg{background-image:radial-gradient(rgba(245,158,11,.15) 1.5px,transparent 1.5px);background-size:22px 22px}
+.gold-text{background:linear-gradient(135deg,#fbbf24,#f59e0b,#b45309);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.img-zoom{overflow:hidden}
+.img-zoom img{transition:.8s}
+.img-zoom:hover img{transform:scale(1.1) rotate(1deg)}
+.tick{animation:tickPop .5s cubic-bezier(.2,2,.3,1)}
+@keyframes tickPop{from{transform:scale(0)}}
+.badge-pulse{animation:bp 1.6s infinite}
+@keyframes bp{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+#adminModal .content-max{max-height:80vh;overflow-y:auto}
+.line-clamp-1{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+/* EDIT MODE */
+body.edit-mode [data-edit]{outline:2px dashed #f59e0b;outline-offset:3px;border-radius:6px;cursor:text;background:rgba(245,158,11,.08);min-width:24px;display:inline-block}
+body.edit-mode [data-edit]:hover{background:rgba(245,158,11,.18)}
+body.edit-mode [data-img]{outline:3px dashed #22c55e!important;outline-offset:3px;cursor:pointer!important;position:relative}
+body.edit-mode [data-img]:hover{filter:brightness(.85)}
+.edit-hint{position:fixed;top:70px;left:50%;transform:translateX(-50%);z-index:90;display:none}
+body.edit-mode .edit-hint{display:block}
+#editToolbar{position:fixed;bottom:18px;right:50%;transform:translateX(50%);z-index:95;display:none}
+#editToolbar.show{display:flex}
+.saved-tick{position:fixed;top:120px;left:50%;transform:translateX(-50%);z-index:96;display:none}
+.saved-tick.show{display:block;animation:toastIn .3s}
+@media(max-width:768px){.loader-logo{font-size:48px}#editToolbar{right:12px;left:12px;transform:none;justify-content:center;flex-wrap:wrap}}
+</style>
+</head>
+<body class="font-cairo">
+
+<!-- LOADER -->
+<div id="loader" class="loader">
+  <div class="loader-logo">3H</div>
+  <div class="text-amber-500 font-bold tracking-widest text-sm">مصنع 3H لتصنيع الأحذية</div>
+  <div class="spin-ring"></div>
+  <div class="text-neutral-500 text-xs font-bold">جاري تحميل المتجر...</div>
+</div>
+
+<!-- EDIT HINT -->
+<div class="edit-hint">
+  <div class="bg-amber-500 text-black font-black text-sm px-6 py-2.5 rounded-full shadow-luxe text-center">🖊️ وضع التعديل المباشر مفعّل — اضغط على أي نص لتعديله وأي صورة لتغييرها</div>
+</div>
+<div id="savedTick" class="saved-tick">
+  <div class="bg-green-600 text-white font-black text-sm px-6 py-2 rounded-full shadow-luxe">✓ تم الحفظ تلقائياً</div>
+</div>
+<input type="file" id="inlineFile" accept="image/*" class="hidden">
+
+<!-- EDIT TOOLBAR -->
+<div id="editToolbar" class="bg-neutral-900 text-white rounded-2xl shadow-luxe p-2 gap-2 items-center border border-amber-500/40">
+  <span class="text-xs font-black text-amber-400 px-2 hidden sm:block">👑 وضع المالك</span>
+  <button id="editModeBtn" onclick="toggleEditMode()" class="text-xs font-black px-4 py-2.5 rounded-xl bg-amber-500 text-black hover:bg-amber-400">🖊️ تعديل مباشر: OFF</button>
+  <button onclick="openAdmin()" class="text-xs font-black px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20">⚙️ اللوحة</button>
+  <button onclick="downloadSiteZip()" class="text-xs font-black px-4 py-2.5 rounded-xl bg-green-600 hover:bg-green-500">⬇️ تحميل الموقع ZIP</button>
+  <button onclick="adminLogout()" class="text-xs font-black px-4 py-2.5 rounded-xl bg-red-500/20 text-red-300 hover:bg-red-500 hover:text-white">خروج</button>
+</div>
+
+<!-- ANNOUNCEMENT -->
+<div id="announceBar" class="bg-gradient-to-l from-amber-600 via-amber-400 to-amber-600 text-black text-center py-2.5 px-3 text-[13px] md:text-sm font-black relative z-40">
+  <span id="announceText" data-edit="announce">🔥 خصم حتى 30% على تشكيلة الشتاء + شحن مجاني للطلبات فوق 1000 جنيه — اطلب الآن عبر واتساب</span>
+</div>
+
+<!-- NAVBAR -->
+<header id="navbar" class="sticky top-0 z-50 glass border-b border-black/10 shadow-sm">
+  <div class="max-w-7xl mx-auto px-3 md:px-4 py-3 flex items-center justify-between gap-2">
+    <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-700 flex items-center justify-center shadow-luxe relative overflow-hidden shrink-0">
+        <span class="text-2xl font-black gold-text">3H</span>
+        <div class="absolute inset-0 bg-gradient-to-tr from-amber-500/20 to-transparent"></div>
+      </div>
+      <div class="leading-tight">
+        <h1 id="storeNameNav" data-edit="storeName" class="font-black text-base md:text-xl">مصنع 3H للأحذية</h1>
+        <p id="storeTagNav" data-edit="tagline" class="text-[11px] md:text-xs text-neutral-500 font-bold">صناعة مصرية فاخرة • جملة وقطاعي</p>
+      </div>
+    </div>
+    <nav class="hidden lg:flex items-center gap-6 font-bold text-[15px]">
+      <a href="#home" class="hover:text-amber-600 transition">الرئيسية</a>
+      <a href="#shop" class="hover:text-amber-600 transition">المتجر</a>
+      <a href="#factory" class="hover:text-amber-600 transition">المصنع</a>
+      <a href="#wholesale" class="hover:text-amber-600 transition">طلبات الجملة</a>
+      <a href="#reviews" class="hover:text-amber-600 transition">آراء العملاء</a>
+      <a href="#contact" class="hover:text-amber-600 transition">تواصل معنا</a>
+    </nav>
+    <div class="flex items-center gap-1.5 md:gap-2">
+      <button onclick="toggleSearch()" class="w-10 h-10 rounded-xl bg-neutral-100 hover:bg-amber-100 flex items-center justify-center transition"><i class="fa fa-search"></i></button>
+      <button onclick="toggleWishlist(true)" class="w-10 h-10 rounded-xl bg-neutral-100 hover:bg-rose-100 flex items-center justify-center transition relative">
+        <i class="fa fa-heart text-rose-500"></i>
+        <span id="wishCount" class="absolute -top-1 -left-1 bg-rose-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+      </button>
+      <button onclick="toggleCart(true)" class="relative h-10 px-3 md:px-4 rounded-xl bg-neutral-900 text-white hover:bg-amber-600 flex items-center gap-2 transition font-bold">
+        <i class="fa fa-bag-shopping"></i><span class="hidden sm:inline">السلة</span>
+        <span id="cartCount" class="absolute -top-2 -left-2 bg-amber-500 text-black text-[11px] w-6 h-6 rounded-full flex items-center justify-center font-black border-2 border-white">0</span>
+      </button>
+      <button onclick="openAdminLogin()" class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center hover:scale-105 transition shadow-glow" title="لوحة التحكم"><i class="fa fa-gear"></i></button>
+      <button onclick="toggleMobileMenu()" class="lg:hidden w-10 h-10 rounded-xl bg-neutral-900 text-white flex items-center justify-center"><i class="fa fa-bars"></i></button>
+    </div>
+  </div>
+  <div id="searchBar" class="hidden border-t bg-white/95 px-4 py-3">
+    <div class="max-w-3xl mx-auto flex gap-2">
+      <input id="searchInput" oninput="renderProducts()" type="text" placeholder="ابحث عن موديل... (مثال: رياضي، كلاسيك، جلد طبيعي)" class="flex-1 border-2 rounded-xl px-4 py-2.5 bg-neutral-50 font-bold">
+      <select id="sortSelect" onchange="renderProducts()" class="border-2 rounded-xl px-3 py-2.5 bg-neutral-50 font-bold text-sm">
+        <option value="new">الأحدث</option>
+        <option value="low">السعر: من الأقل</option>
+        <option value="high">السعر: من الأعلى</option>
+        <option value="pop">الأعلى تقييماً</option>
+      </select>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t bg-white px-4 py-4 flex-col gap-3 font-bold">
+    <a href="#home" onclick="toggleMobileMenu()">🏠 الرئيسية</a>
+    <a href="#shop" onclick="toggleMobileMenu()">👟 المتجر</a>
+    <a href="#factory" onclick="toggleMobileMenu()">🏭 المصنع</a>
+    <a href="#wholesale" onclick="toggleMobileMenu()">📦 طلبات الجملة</a>
+    <a href="#reviews" onclick="toggleMobileMenu()">⭐ آراء العملاء</a>
+    <a href="#contact" onclick="toggleMobileMenu()">📞 تواصل معنا</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-[88vh] bg-ink-900 text-white overflow-hidden flex items-center">
+  <div class="absolute inset-0">
+    <div class="hero-slide active">
+      <img data-img="heroSlide1" id="heroSlide1" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover opacity-50" alt="">
+      <div class="absolute inset-0 bg-gradient-to-l from-black via-black/75 to-black/20"></div>
+    </div>
+    <div class="hero-slide">
+      <img data-img="heroSlide2" id="heroSlide2" src="https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover opacity-50" alt="">
+      <div class="absolute inset-0 bg-gradient-to-l from-black via-black/75 to-black/20"></div>
+    </div>
+    <div class="hero-slide">
+      <img data-img="heroSlide3" id="heroSlide3" src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1600&auto=format&fit=crop" class="w-full h-full object-cover opacity-50" alt="">
+      <div class="absolute inset-0 bg-gradient-to-l from-black via-black/75 to-black/20"></div>
+    </div>
+  </div>
+  <div class="absolute inset-0 pattern-bg opacity-40"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 py-14 grid lg:grid-cols-2 gap-10 items-center w-full">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/40 text-amber-400 px-4 py-1.5 rounded-full text-sm font-bold mb-5">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        <span data-edit="heroBadge">مصنع معتمد • توصيل لجميع المحافظات</span>
+      </div>
+      <h2 class="text-4xl md:text-6xl font-black leading-[1.2] mb-4">
+        <span data-edit="heroTitleA">خطوتك تبدأ من</span> <span data-edit="heroTitleB" class="gold-text">مصنع 3H</span><br>
+        <span data-edit="heroTitleC">فخامة تدوم.. سعر المصنع</span>
+      </h2>
+      <p data-edit="heroSub" class="text-neutral-300 text-base md:text-lg mb-7 leading-relaxed">أكبر تشكيلة أحذية رجالي وحريمي وأطفالي بجودة التصدير. اطلب قطاعي أو جملة مباشرة من المصنع بدون وسيط، وتواصل معنا واتساب فوراً.</p>
+      <div class="flex flex-wrap gap-3 mb-8">
+        <a href="#shop" class="btn-shine bg-gradient-to-l from-amber-500 to-amber-600 text-black font-black px-7 py-4 rounded-2xl text-lg hover:scale-105 transition shadow-glow"><i class="fa fa-bag-shopping ml-2"></i><span data-edit="heroBtnShop">تسوق الآن</span></a>
+        <button onclick="orderViaWhats('استفسار عام عن منتجات مصنع 3H')" class="btn-shine bg-[#25D366] text-white font-black px-7 py-4 rounded-2xl text-lg hover:scale-105 transition flex items-center gap-2">
+          <i class="fab fa-whatsapp text-2xl"></i><span data-edit="heroBtnWhats">اطلب واتساب</span>
+        </button>
+        <a href="#factory" class="border-2 border-white/30 hover:border-amber-500 font-bold px-7 py-4 rounded-2xl transition">🏭 <span data-edit="heroBtnFactory">جولة في المصنع</span></a>
+      </div>
+      <div class="grid grid-cols-3 gap-3 max-w-md">
+        <div class="glass-dark rounded-2xl p-3 text-center border border-white/10">
+          <div class="text-2xl font-black text-amber-400"><span class="counter" id="stat1Num" data-target="15">0</span>+</div>
+          <div class="text-xs text-neutral-300" data-edit="stat1Label">سنة خبرة</div>
+        </div>
+        <div class="glass-dark rounded-2xl p-3 text-center border border-white/10">
+          <div class="text-2xl font-black text-amber-400"><span class="counter" id="stat2Num" data-target="50000">0</span>+</div>
+          <div class="text-xs text-neutral-300" data-edit="stat2Label">عميل سعيد</div>
+        </div>
+        <div class="glass-dark rounded-2xl p-3 text-center border border-white/10">
+          <div class="text-2xl font-black text-amber-400"><span class="counter" id="stat3Num" data-target="200">0</span>+</div>
+          <div class="text-xs text-neutral-300" data-edit="stat3Label">موديل</div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:flex justify-center relative">
+      <div class="absolute w-[420px] h-[420px] bg-amber-500/20 rounded-full blur-[100px]"></div>
+      <img data-img="heroMainImg" id="heroMainImg" src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop" class="float-anim shoe-shadow relative z-10 w-[460px] h-[460px] object-cover rounded-[40px] border-4 border-white/10" alt="3H">
+      <div class="absolute z-20 bottom-8 -right-2 glass-dark border border-white/15 rounded-2xl p-4 flex items-center gap-3 shadow-luxe">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=200&auto=format&fit=crop" class="w-14 h-14 rounded-xl object-cover" alt="">
+        <div>
+          <div class="font-black text-sm" data-edit="heroCardName">الأكثر مبيعاً 🔥</div>
+          <div class="text-amber-400 font-black"><span data-edit="heroCardPrice">450 ج.م</span> <s class="text-neutral-400 text-xs font-normal">650</s></div>
+        </div>
+      </div>
+      <div class="absolute z-20 top-6 -left-2 glass-dark border border-white/15 rounded-2xl px-4 py-3 shadow-luxe">
+        <div class="text-sm font-bold" data-edit="heroRatingText">⭐ 4.9 تقييم عملائنا</div>
+        <div class="text-[11px] text-neutral-400">+12,000 تقييم موثق</div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2" id="heroDots"></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-neutral-900 text-white py-3 overflow-hidden border-y-4 border-amber-500 marquee-wrap">
+  <div class="marquee font-bold text-sm" id="marqueeTrack"></div>
+</div>
+
+<!-- SHOP -->
+<section id="shop" class="max-w-7xl mx-auto px-4 py-14">
+  <div class="text-center mb-8 reveal">
+    <div class="text-amber-600 font-black text-sm tracking-widest mb-2" data-edit="shopBadge">— تشكيلتنا المميزة —</div>
+    <h2 class="text-3xl md:text-5xl font-black"><span data-edit="shopTitleA">تسوق من</span> <span data-edit="shopTitleB" class="gold-text">مصنع 3H</span> <span data-edit="shopTitleC">مباشرة</span></h2>
+    <p class="text-neutral-500 mt-3 font-semibold" data-edit="shopSub">كل الموديلات متوفرة جملة وقطاعي • اختر مقاسك واطلب بضغطة واحدة</p>
+  </div>
+  <div id="catBar" class="flex gap-2 overflow-x-auto pb-3 mb-6 justify-start md:justify-center reveal"></div>
+  <div class="flex items-center justify-between mb-4 gap-2 flex-wrap">
+    <div class="font-bold text-neutral-600 text-sm"><span id="prodCount">0</span> منتج متاح</div>
+    <button onclick="orderViaWhats('عايز كتالوج الجملة الكامل PDF')" class="text-sm font-black text-amber-700 bg-amber-100 hover:bg-amber-200 px-4 py-2 rounded-xl transition"><i class="fa fa-file-pdf ml-1"></i> اطلب كتالوج الجملة PDF</button>
+  </div>
+  <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6"></div>
+</section>
+
+<!-- OFFER -->
+<section id="offerSection" class="max-w-7xl mx-auto px-4 pb-8">
+  <div class="relative overflow-hidden rounded-[28px] bg-gradient-to-l from-neutral-900 via-neutral-800 to-amber-900 text-white p-8 md:p-12 reveal">
+    <div class="absolute inset-0 pattern-bg opacity-30"></div>
+    <img data-img="offerImg" id="offerImg" src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=800&auto=format&fit=crop" class="absolute left-0 top-0 h-full w-1/3 object-cover opacity-30 hidden md:block" style="mask-image:linear-gradient(to left,black,transparent)" alt="">
+    <div class="relative z-10 md:w-2/3">
+      <div class="inline-block bg-red-500 text-white text-xs font-black px-3 py-1.5 rounded-full mb-3 badge-pulse">
+        <span data-edit="offerBadge">عرض محدود 🔥 ينتهي خلال</span> <span id="offerTimer" dir="ltr">02:59:59</span>
+      </div>
+      <h3 data-edit="offerTitle" class="text-2xl md:text-4xl font-black mb-3">اشترِ قطعتين واحصل على الثالثة بنصف الثمن</h3>
+      <p data-edit="offerDesc" class="text-neutral-300 mb-6">العرض ساري على جميع الموديلات الرياضية والكاجوال حتى نفاد الكمية. الكمية محدودة في المخزن!</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#shop" class="bg-amber-500 text-black font-black px-7 py-3 rounded-xl hover:scale-105 transition">تسوق العرض الآن</a>
+        <button onclick="orderViaWhats('عايز استفسر عن عرض القطعتين')" class="bg-white/10 border border-white/25 font-bold px-7 py-3 rounded-xl hover:bg-white/20 transition"><i class="fab fa-whatsapp ml-1 text-green-400"></i> استفسر واتساب</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACTORY -->
+<section id="factory" class="bg-ink-900 text-white py-16 relative overflow-hidden">
+  <div class="absolute inset-0 pattern-bg opacity-20"></div>
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-10 items-center mb-12">
+      <div class="reveal">
+        <div class="text-amber-500 font-black text-sm tracking-widest mb-2" data-edit="factoryBadge">— 🏭 مصنع 3H للتصنيع —</div>
+        <h2 class="text-3xl md:text-5xl font-black leading-tight mb-4">
+          <span data-edit="factoryTitleA">من خط الإنتاج</span> <span data-edit="factoryTitleB" class="gold-text">لباب بيتك</span> <span data-edit="factoryTitleC">مباشرة</span>
+        </h2>
+        <p data-edit="factoryDesc" class="text-neutral-300 leading-relaxed mb-6">نمتلك أحدث خطوط الإنتاج في مصر: حقن، خياطة، لزق حراري، وفينيش يدوي فاخر. ننتج أكثر من 5000 زوج يومياً بخامات مستوردة، ونورّد لكبرى المحلات والبراندات. تعامل مع المصنع مباشرة ووفّر فرق الوسيط.</p>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><div class="text-2xl mb-1">🧵</div><div class="font-black text-sm">خياطة وتقفيل فاخر</div><div class="text-xs text-neutral-400">جودة تصدير أوروبية</div></div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><div class="text-2xl mb-1">👞</div><div class="font-black text-sm">نعل طبي مريح</div><div class="text-xs text-neutral-400">خفيف ومقاوم للانزلاق</div></div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><div class="text-2xl mb-1">🐄</div><div class="font-black text-sm">جلد طبيعي 100%</div><div class="text-xs text-neutral-400">في الموديلات الكلاسيك</div></div>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4"><div class="text-2xl mb-1">📦</div><div class="font-black text-sm">تغليف براند خاص</div><div class="text-xs text-neutral-400">نصنع باسم محلك</div></div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button onclick="orderViaWhats('عايز أعمل زيارة للمصنع / أتعاقد كوكيل')" class="bg-amber-500 text-black font-black px-6 py-3 rounded-xl hover:scale-105 transition">🤝 كن وكيلاً معتمداً</button>
+          <button onclick="document.getElementById('wholesale').scrollIntoView({behavior:'smooth'})" class="border border-white/25 px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition">أسعار الجملة</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3 reveal">
+        <img data-img="fac1" id="facImg1" src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=600&auto=format&fit=crop" class="rounded-2xl h-52 md:h-56 w-full object-cover border border-white/10" alt="مخزن المصنع">
+        <img data-img="fac2" id="facImg2" src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=600&auto=format&fit=crop" class="rounded-2xl h-52 md:h-56 w-full object-cover border border-white/10 mt-6" alt="خط الإنتاج">
+        <img data-img="fac3" id="facImg3" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop" class="rounded-2xl h-52 md:h-56 w-full object-cover border border-white/10 -mt-6" alt="المعرض">
+        <img data-img="fac4" id="facImg4" src="https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=600&auto=format&fit=crop" class="rounded-2xl h-52 md:h-56 w-full object-cover border border-white/10" alt="منتجات">
+      </div>
+    </div>
+    <div class="grid md:grid-cols-4 gap-4 reveal">
+      <div class="text-center bg-white/5 rounded-2xl p-6 border border-white/10"><div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/20 flex items-center justify-center text-2xl mb-3">1️⃣</div><div class="font-black">التصميم والقص</div><div class="text-xs text-neutral-400 mt-1">أحدث ماكينات القص بالليزر</div></div>
+      <div class="text-center bg-white/5 rounded-2xl p-6 border border-white/10"><div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/20 flex items-center justify-center text-2xl mb-3">2️⃣</div><div class="font-black">الخياطة والتجميع</div><div class="text-xs text-neutral-400 mt-1">فنيون بخبرة 15+ سنة</div></div>
+      <div class="text-center bg-white/5 rounded-2xl p-6 border border-white/10"><div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/20 flex items-center justify-center text-2xl mb-3">3️⃣</div><div class="font-black">الحقن واللزق</div><div class="text-xs text-neutral-400 mt-1">نعل مدمج يدوم طويلاً</div></div>
+      <div class="text-center bg-white/5 rounded-2xl p-6 border border-white/10"><div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/20 flex items-center justify-center text-2xl mb-3">4️⃣</div><div class="font-black">الجودة والتغليف</div><div class="text-xs text-neutral-400 mt-1">فحص قطعة قطعة قبل الشحن</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHOLESALE -->
+<section id="wholesale" class="max-w-7xl mx-auto px-4 py-14">
+  <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+    <div class="bg-gradient-to-br from-amber-400 to-amber-700 rounded-[28px] p-8 md:p-10 text-black relative overflow-hidden reveal">
+      <div class="absolute -left-10 -bottom-10 text-[160px] opacity-10">📦</div>
+      <h3 class="text-3xl font-black mb-3" data-edit="wholesaleTitle">أسعار خاصة للجملة والمحلات 🔥</h3>
+      <p class="font-semibold mb-6 text-black/80" data-edit="wholesaleDesc">امتلك مشروعك مع 3H: أقل كمية دستة مشكلة، شحن لكل المحافظات، إمكانية التصنيع باسم البراند الخاص بك.</p>
+      <ul class="space-y-3 font-bold mb-6">
+        <li class="flex gap-2 items-center bg-white/60 rounded-xl p-3"><span class="w-8 h-8 bg-black text-amber-400 rounded-lg flex items-center justify-center shrink-0">✓</span><span data-edit="wholesaleF1">خصم يصل لـ 45% على كميات الجملة</span></li>
+        <li class="flex gap-2 items-center bg-white/60 rounded-xl p-3"><span class="w-8 h-8 bg-black text-amber-400 rounded-lg flex items-center justify-center shrink-0">✓</span><span data-edit="wholesaleF2">تشكيل جديد كل أسبوع + صور احترافية مجانية</span></li>
+        <li class="flex gap-2 items-center bg-white/60 rounded-xl p-3"><span class="w-8 h-8 bg-black text-amber-400 rounded-lg flex items-center justify-center shrink-0">✓</span><span data-edit="wholesaleF3">استبدال المقاسات الراكدة (بشروط التعاقد)</span></li>
+      </ul>
+      <div class="grid grid-cols-3 gap-2 text-center font-black">
+        <div class="bg-black text-amber-400 rounded-xl p-3"><div class="text-xl">12+</div><div class="text-[11px]">قطعة: خصم 20%</div></div>
+        <div class="bg-black text-amber-400 rounded-xl p-3"><div class="text-xl">50+</div><div class="text-[11px]">قطعة: خصم 30%</div></div>
+        <div class="bg-black text-amber-400 rounded-xl p-3"><div class="text-xl">200+</div><div class="text-[11px]">قطعة: خصم 45%</div></div>
+      </div>
+    </div>
+    <div class="bg-white rounded-[28px] p-8 shadow-luxe border reveal">
+      <h3 class="text-2xl font-black mb-1">اطلب عرض سعر الجملة</h3>
+      <p class="text-sm text-neutral-500 font-semibold mb-5">املأ البيانات وهنبعتلك العرض على واتساب فوراً</p>
+      <div class="grid gap-3">
+        <input id="wsName" class="border-2 rounded-xl px-4 py-3 bg-neutral-50 font-bold" placeholder="الاسم بالكامل *">
+        <div class="grid grid-cols-2 gap-3">
+          <input id="wsPhone" class="border-2 rounded-xl px-4 py-3 bg-neutral-50 font-bold" placeholder="رقم الموبايل *">
+          <input id="wsCity" class="border-2 rounded-xl px-4 py-3 bg-neutral-50" placeholder="المحافظة">
+        </div>
+        <select id="wsType" class="border-2 rounded-xl px-4 py-3 bg-neutral-50 font-bold">
+          <option>محل قطاعي</option><option>موزع جملة</option><option>أونلاين / سوشيال</option><option>براند خاص (تصنيع باسمي)</option>
+        </select>
+        <input id="wsQty" type="number" class="border-2 rounded-xl px-4 py-3 bg-neutral-50" placeholder="الكمية التقريبية المطلوبة">
+        <textarea id="wsMsg" class="border-2 rounded-xl px-4 py-3 bg-neutral-50" rows="2" placeholder="اكتب الموديلات المطلوبة أو أي استفسار..."></textarea>
+        <button onclick="sendWholesale()" class="btn-shine bg-[#25D366] text-white font-black py-4 rounded-xl text-lg hover:scale-[1.02] transition"><i class="fab fa-whatsapp ml-2 text-xl"></i> إرسال طلب الجملة واتساب</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="bg-white border-y py-14">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-8 reveal">
+      <div class="text-amber-600 font-black text-sm" data-edit="reviewsBadge">— قالوا عنا —</div>
+      <h2 class="text-3xl md:text-4xl font-black" data-edit="reviewsTitle">تقييمات حقيقية من عملائنا ⭐</h2>
+    </div>
+    <div id="reviewsGrid" class="grid md:grid-cols-3 gap-5 reveal"></div>
+    <div class="max-w-2xl mx-auto mt-8 bg-neutral-50 border rounded-2xl p-5 reveal">
+      <h4 class="font-black mb-3">أضف تقييمك ✍️</h4>
+      <div class="grid md:grid-cols-2 gap-3 mb-3">
+        <input id="rvName" class="border-2 rounded-xl px-4 py-2.5 bg-white font-bold" placeholder="اسمك">
+        <select id="rvStars" class="border-2 rounded-xl px-4 py-2.5 bg-white font-bold">
+          <option value="5">⭐⭐⭐⭐⭐ ممتاز</option><option value="4">⭐⭐⭐⭐ جيد جداً</option><option value="3">⭐⭐⭐ جيد</option>
+        </select>
+      </div>
+      <textarea id="rvText" class="border-2 rounded-xl px-4 py-2.5 bg-white w-full" rows="2" placeholder="احكيلنا عن تجربتك مع خامة 3H..."></textarea>
+      <button onclick="addReview()" class="mt-3 bg-neutral-900 text-white font-black px-6 py-2.5 rounded-xl hover:bg-amber-600 transition">نشر التقييم</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-4 py-14">
+  <div class="text-center mb-8 reveal">
+    <div class="text-amber-600 font-black text-sm" data-edit="contactBadge">— كلمنا في أي وقت —</div>
+    <h2 class="text-3xl md:text-4xl font-black"><span data-edit="contactTitleA">تواصل مع</span> <span data-edit="contactTitleB" class="gold-text">مصنع 3H</span> <span data-edit="contactTitleC">مباشرة</span></h2>
+    <p class="text-neutral-500 font-semibold mt-2" data-edit="contactSub">متاحون يومياً من 10 صباحاً حتى 11 مساءً • رد فوري على الواتساب</p>
+  </div>
+  <div id="socialGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 reveal"></div>
+  <div class="grid md:grid-cols-2 gap-5 mt-6">
+    <div class="bg-neutral-900 text-white rounded-3xl p-7 reveal">
+      <h3 class="font-black text-xl mb-4">📍 بيانات المصنع والمعرض</h3>
+      <div class="space-y-3 text-sm font-semibold">
+        <div class="flex gap-3 items-start"><i class="fa fa-location-dot text-amber-500 mt-1"></i><span data-edit="address">القاهرة، مصر — المنطقة الصناعية، شارع المصانع</span></div>
+        <div class="flex gap-3 items-center"><i class="fa fa-phone text-amber-500"></i><span data-edit="phone" dir="ltr">01000000000</span></div>
+        <div class="flex gap-3 items-center"><i class="fa fa-clock text-amber-500"></i><span data-edit="hours">يومياً من 10 صباحاً حتى 11 مساءً</span></div>
+      </div>
+      <button onclick="orderViaWhats('محتاج اللوكيشن بتاع المصنع')" class="mt-5 w-full bg-amber-500 text-black font-black py-3 rounded-xl hover:scale-[1.02] transition">📍 اطلب اللوكيشن واتساب</button>
+    </div>
+    <div class="bg-gradient-to-br from-[#25D366] to-emerald-700 text-white rounded-3xl p-7 reveal relative overflow-hidden">
+      <i class="fab fa-whatsapp absolute -left-6 -bottom-8 text-[160px] opacity-15"></i>
+      <h3 class="font-black text-xl mb-2">💬 ابعتلنا رسالة سريعة</h3>
+      <p class="text-sm text-white/85 mb-4 font-semibold">اكتب استفسارك وهنرد عليك فوراً على واتساب</p>
+      <input id="quickName" class="w-full rounded-xl px-4 py-3 text-black font-bold mb-3" placeholder="اسمك">
+      <textarea id="quickMsg" rows="2" class="w-full rounded-xl px-4 py-3 text-black font-semibold" placeholder="عايز تستفسر عن إيه؟"></textarea>
+      <button onclick="sendQuick()" class="mt-3 w-full bg-black/80 font-black py-3 rounded-xl hover:bg-black transition">إرسال عبر واتساب <i class="fa fa-paper-plane mr-1"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink-900 text-white pt-12 pb-6 border-t-4 border-amber-500">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 mb-8">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-2xl font-black text-black">3H</div>
+        <div>
+          <div class="font-black" data-edit="storeName">مصنع 3H للأحذية</div>
+          <div class="text-xs text-neutral-400">جودة تستحقها قدمك</div>
+        </div>
+      </div>
+      <p class="text-sm text-neutral-400 leading-relaxed" data-edit="footerAbout">مصنع مصري متخصص في تصنيع الأحذية الرجالي والحريمي والأطفالي بخامات فاخرة وأسعار المصنع مباشرة. جملة وقطاعي لجميع المحافظات.</p>
+    </div>
+    <div>
+      <h4 class="font-black mb-4 text-amber-400">روابط سريعة</h4>
+      <div class="space-y-2 text-sm font-semibold text-neutral-300">
+        <a href="#shop" class="block hover:text-amber-400">👟 تسوق المنتجات</a>
+        <a href="#factory" class="block hover:text-amber-400">🏭 عن المصنع</a>
+        <a href="#wholesale" class="block hover:text-amber-400">📦 أسعار الجملة</a>
+        <a href="#contact" class="block hover:text-amber-400">📞 تواصل معنا</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-black mb-4 text-amber-400">خدمة العملاء</h4>
+      <div class="space-y-2 text-sm text-neutral-300 font-semibold">
+        <div>🔄 استبدال خلال 14 يوم</div>
+        <div>🚚 شحن 2-4 أيام عمل</div>
+        <div>💵 دفع عند الاستلام</div>
+        <div>🛡️ ضمان ضد عيوب الصناعة</div>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-black mb-4 text-amber-400">تابعنا</h4>
+      <div id="footSocials" class="flex gap-2 flex-wrap"></div>
+      <button onclick="downloadSiteZip()" class="mt-4 text-xs bg-green-600 hover:bg-green-500 px-4 py-2.5 rounded-lg font-bold transition w-full">⬇️ تحميل الموقع كامل ZIP</button>
+      <button onclick="openAdminLogin()" class="mt-2 text-xs bg-white/10 hover:bg-amber-500 hover:text-black px-4 py-2.5 rounded-lg font-bold transition w-full"><i class="fa fa-gear ml-1"></i> دخول صاحب المتجر (لوحة التحكم)</button>
+    </div>
+  </div>
+  <div class="border-t border-white/10 pt-4 text-center text-xs text-neutral-500 font-semibold" data-edit="copyright">© 2026 مصنع 3H لتصنيع الأحذية — جميع الحقوق محفوظة | صُنع بحُب في مصر 🇪🇬</div>
+</footer>
+
+<!-- FLOATING -->
+<div id="fabWrap" class="fixed left-3 bottom-24 z-40 flex flex-col gap-2"></div>
+<button onclick="toggleCart(true)" class="md:hidden fixed bottom-5 right-4 z-40 w-14 h-14 rounded-full bg-neutral-900 text-white shadow-luxe flex items-center justify-center text-xl relative">
+  <i class="fa fa-bag-shopping"></i>
+  <span id="cartCountM" class="absolute -top-1 -left-1 bg-amber-500 text-black text-[11px] w-6 h-6 rounded-full font-black flex items-center justify-center">0</span>
+</button>
+
+<!-- CART DRAWER -->
+<div id="cartOverlay" onclick="toggleCart(false)" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm"></div>
+<aside id="cartDrawer" class="drawer fixed top-0 left-0 h-full w-full max-w-md bg-white z-[61] shadow-2xl flex flex-col" style="transform:translateX(-110%)">
+  <div class="bg-neutral-900 text-white p-5 flex items-center justify-between">
+    <div>
+      <h3 class="font-black text-lg">🛒 سلة التسوق</h3>
+      <p class="text-xs text-neutral-400"><span id="cartDrawerCount">0</span> منتج في السلة</p>
+    </div>
+    <button onclick="toggleCart(false)" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-red-500 flex items-center justify-center transition"><i class="fa fa-xmark"></i></button>
+  </div>
+  <div id="cartItems" class="flex-1 overflow-y-auto p-4 space-y-3 bg-neutral-50"></div>
+  <div class="p-4 border-t bg-white space-y-3">
+    <div class="flex gap-2">
+      <input id="couponInput" class="flex-1 border-2 rounded-xl px-3 py-2 text-sm font-bold" placeholder="كود الخصم (جرّب: 3H20)">
+      <button onclick="applyCoupon()" class="bg-neutral-900 text-white px-4 rounded-xl font-bold text-sm hover:bg-amber-600">تطبيق</button>
+    </div>
+    <div class="text-sm font-bold space-y-1">
+      <div class="flex justify-between text-neutral-600"><span>المجموع الفرعي</span><span id="subTotal">0 ج.م</span></div>
+      <div id="discountRow" class="justify-between text-green-600" style="display:none"><span>الخصم</span><span id="discountVal">-0 ج.م</span></div>
+      <div class="flex justify-between text-neutral-600"><span>الشحن</span><span id="shipVal">يُحسب عند التأكيد</span></div>
+      <div class="flex justify-between text-lg font-black border-t pt-2"><span>الإجمالي</span><span id="grandTotal" class="text-amber-700">0 ج.م</span></div>
+    </div>
+    <button onclick="openCheckout()" class="w-full btn-shine bg-gradient-to-l from-amber-500 to-amber-600 font-black py-4 rounded-xl text-lg hover:scale-[1.02] transition">تأكيد الطلب الآن <i class="fa fa-arrow-left mr-1"></i></button>
+    <button onclick="orderCartViaWhats()" class="w-full bg-[#25D366] text-white font-black py-3.5 rounded-xl hover:scale-[1.02] transition"><i class="fab fa-whatsapp ml-1 text-lg"></i> إتمام الطلب عبر واتساب</button>
+  </div>
+</aside>
+
+<!-- PRODUCT MODAL -->
+<div id="prodModal" class="fixed inset-0 z-[70] hidden items-center justify-center p-3 bg-black/70 backdrop-blur-sm" onclick="if(event.target===this)closeProduct()">
+  <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden max-h-[92vh] overflow-y-auto grid md:grid-cols-2">
+    <div class="relative">
+      <img id="pmImg" src="" class="w-full h-64 md:h-full object-cover min-h-[280px]" alt="">
+      <span id="pmBadge" class="absolute top-4 right-4 bg-red-500 text-white text-xs font-black px-3 py-1.5 rounded-full"></span>
+      <button onclick="closeProduct()" class="md:hidden absolute top-3 left-3 w-9 h-9 bg-black/60 text-white rounded-full"><i class="fa fa-xmark"></i></button>
+    </div>
+    <div class="p-6">
+      <div class="flex items-start justify-between gap-2">
+        <div>
+          <div id="pmCat" class="text-xs font-black text-amber-600 mb-1"></div>
+          <h3 id="pmName" class="font-black text-xl md:text-2xl leading-snug"></h3>
+        </div>
+        <button onclick="closeProduct()" class="hidden md:flex w-9 h-9 rounded-lg bg-neutral-100 hover:bg-red-500 hover:text-white items-center justify-center transition shrink-0"><i class="fa fa-xmark"></i></button>
+      </div>
+      <div id="pmStars" class="text-amber-500 text-sm my-2"></div>
+      <p id="pmDesc" class="text-sm text-neutral-600 leading-relaxed mb-4"></p>
+      <div class="flex items-center gap-3 mb-4">
+        <span id="pmPrice" class="text-3xl font-black text-amber-700"></span>
+        <s id="pmOld" class="text-neutral-400 font-bold"></s>
+        <span id="pmOff" class="bg-green-100 text-green-700 text-xs font-black px-2 py-1 rounded-lg"></span>
+      </div>
+      <div class="mb-3">
+        <div class="font-black text-sm mb-2">اختر المقاس:</div>
+        <div id="pmSizes" class="flex flex-wrap gap-2"></div>
+      </div>
+      <div class="mb-4">
+        <div class="font-black text-sm mb-2">اختر اللون:</div>
+        <div id="pmColors" class="flex gap-2"></div>
+      </div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="flex items-center border-2 rounded-xl overflow-hidden">
+          <button onclick="pmQtyChange(-1)" class="w-10 h-10 font-black hover:bg-neutral-100">−</button>
+          <span id="pmQty" class="w-10 text-center font-black">1</span>
+          <button onclick="pmQtyChange(1)" class="w-10 h-10 font-black hover:bg-neutral-100">+</button>
+        </div>
+        <div id="pmStock" class="text-xs font-bold text-green-600"></div>
+      </div>
+      <div class="grid grid-cols-2 gap-2">
+        <button onclick="addToCartFromModal()" class="bg-neutral-900 text-white font-black py-3.5 rounded-xl hover:bg-amber-600 transition"><i class="fa fa-cart-plus ml-1"></i> أضف للسلة</button>
+        <button onclick="buyNowFromModal()" class="btn-shine bg-[#25D366] text-white font-black py-3.5 rounded-xl hover:scale-[1.02] transition"><i class="fab fa-whatsapp ml-1"></i> اشترِ الآن</button>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2 text-center text-[11px] font-bold text-neutral-600">
+        <div class="bg-neutral-50 rounded-lg p-2">🚚 شحن سريع</div>
+        <div class="bg-neutral-50 rounded-lg p-2">🔄 استبدال مجاني</div>
+        <div class="bg-neutral-50 rounded-lg p-2">💵 دفع عند الاستلام</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div id="checkoutModal" class="fixed inset-0 z-[75] hidden items-center justify-center p-3 bg-black/70 backdrop-blur-sm" onclick="if(event.target===this)closeCheckout()">
+  <div class="bg-white rounded-3xl max-w-lg w-full p-6 max-h-[92vh] overflow-y-auto">
+    <div id="checkoutForm">
+      <h3 class="font-black text-2xl mb-1">📝 بيانات التوصيل</h3>
+      <p class="text-sm text-neutral-500 font-semibold mb-4">هنأكد معاك الطلب على واتساب / تليفون</p>
+      <div class="space-y-3">
+        <input id="coName" class="w-full border-2 rounded-xl px-4 py-3 bg-neutral-50 font-bold" placeholder="الاسم بالكامل *">
+        <div class="grid grid-cols-2 gap-3">
+          <input id="coPhone" class="border-2 rounded-xl px-4 py-3 bg-neutral-50 font-bold" placeholder="رقم الموبايل *">
+          <input id="coPhone2" class="border-2 rounded-xl px-4 py-3 bg-neutral-50" placeholder="رقم احتياطي">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <input id="coCity" class="border-2 rounded-xl px-4 py-3 bg-neutral-50 font-bold" placeholder="المحافظة *">
+          <input id="coArea" class="border-2 rounded-xl px-4 py-3 bg-neutral-50" placeholder="المنطقة / المركز">
+        </div>
+        <textarea id="coAddr" rows="2" class="w-full border-2 rounded-xl px-4 py-3 bg-neutral-50" placeholder="العنوان بالتفصيل (شارع، علامة مميزة) *"></textarea>
+        <textarea id="coNotes" rows="1" class="w-full border-2 rounded-xl px-4 py-3 bg-neutral-50" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+        <div class="bg-amber-50 border-2 border-amber-200 rounded-xl p-3 text-sm font-bold flex justify-between"><span>إجمالي الطلب:</span><span id="coTotal" class="text-amber-700"></span></div>
+        <button onclick="submitOrder()" class="w-full btn-shine bg-gradient-to-l from-amber-500 to-amber-600 font-black py-4 rounded-xl text-lg">✅ تأكيد الطلب وإرساله واتساب</button>
+        <button onclick="closeCheckout()" class="w-full text-sm font-bold text-neutral-500">رجوع</button>
+      </div>
+    </div>
+    <div id="checkoutSuccess" class="hidden text-center py-6">
+      <div class="tick w-20 h-20 mx-auto bg-green-500 rounded-full flex items-center justify-center text-white text-4xl mb-4">✓</div>
+      <h3 class="font-black text-2xl mb-2">تم استلام طلبك بنجاح! 🎉</h3>
+      <p class="text-neutral-600 font-semibold mb-4">رقم الطلب: <span id="orderNum" class="font-black text-amber-700 text-lg"></span><br>هنتصل بيك للتأكيد خلال دقائق. تم فتح واتساب لإرسال تفاصيل الطلب.</p>
+      <button onclick="closeCheckout();toggleCart(false)" class="bg-neutral-900 text-white font-black px-8 py-3 rounded-xl">متابعة التسوق</button>
+    </div>
+  </div>
+</div>
+
+<!-- WISHLIST -->
+<div id="wishOverlay" onclick="toggleWishlist(false)" class="fixed inset-0 bg-black/60 z-[60] hidden"></div>
+<aside id="wishDrawer" class="drawer fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[61] shadow-2xl flex flex-col" style="transform:translateX(110%)">
+  <div class="bg-rose-600 text-white p-5 flex items-center justify-between">
+    <h3 class="font-black text-lg">❤️ المفضلة</h3>
+    <button onclick="toggleWishlist(false)" class="w-9 h-9 rounded-lg bg-white/20 flex items-center justify-center"><i class="fa fa-xmark"></i></button>
+  </div>
+  <div id="wishItems" class="flex-1 overflow-y-auto p-4 space-y-3 bg-neutral-50"></div>
+</aside>
+
+<!-- ADMIN LOGIN -->
+<div id="loginModal" class="fixed inset-0 z-[80] hidden items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onclick="if(event.target===this){this.classList.add('hidden');this.classList.remove('flex')}">
+  <div class="bg-white rounded-3xl max-w-sm w-full p-7 text-center shadow-luxe">
+    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center text-3xl mb-3">🔐</div>
+    <h3 class="font-black text-xl mb-1">لوحة تحكم صاحب المتجر</h3>
+    <p class="text-xs text-neutral-500 font-bold mb-4">هذه المنطقة خاصة بإدارة المتجر فقط — مصنع 3H</p>
+    <input id="adminPass" type="password" class="w-full border-2 rounded-xl px-4 py-3 text-center text-lg font-black mb-3 tracking-widest" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkAdmin()">
+    <p class="text-[11px] text-neutral-400 mb-3 font-bold">ادخل الرقم السري الخاص بك للدخول</p>
+    <button onclick="checkAdmin()" class="w-full bg-neutral-900 text-white font-black py-3 rounded-xl hover:bg-amber-600 transition">دخول اللوحة</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminModal" class="fixed inset-0 z-[85] hidden bg-black/80 backdrop-blur-sm p-2 md:p-6 overflow-y-auto">
+  <div class="bg-neutral-100 rounded-3xl max-w-6xl mx-auto overflow-hidden min-h-[85vh]">
+    <div class="bg-neutral-900 text-white p-4 md:p-5 flex items-center justify-between sticky top-0 z-10 flex-wrap gap-2">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-amber-500 flex items-center justify-center text-black text-xl shrink-0">⚙️</div>
+        <div>
+          <h3 class="font-black">لوحة تحكم متجر 3H 👑</h3>
+          <p class="text-xs text-neutral-400">عدّل أي حرف وأي صورة من هنا — يُحفظ تلقائياً</p>
+        </div>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button onclick="toggleEditMode(true);closeAdmin()" class="text-xs bg-amber-500 text-black px-3 py-2 rounded-lg font-black hover:bg-amber-400">🖊️ تعديل مباشر من الموقع</button>
+        <button onclick="downloadSiteZip()" class="text-xs bg-green-600 text-white px-3 py-2 rounded-lg font-black hover:bg-green-500">⬇️ تحميل الموقع ZIP</button>
+        <button onclick="resetStore()" class="text-xs bg-red-500/20 text-red-300 hover:bg-red-500 hover:text-white px-3 py-2 rounded-lg font-bold transition">↺ استعادة الافتراضي</button>
+        <button onclick="closeAdmin()" class="w-10 h-10 rounded-lg bg-white/10 hover:bg-red-500 flex items-center justify-center transition"><i class="fa fa-xmark"></i></button>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-[230px_1fr]">
+      <div class="bg-white border-l p-3 flex md:flex-col gap-2 overflow-x-auto md:min-h-[70vh]">
+        <button onclick="adminTab('general',this)" class="admin-tab active whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">🏪 لوحة القيادة</button>
+        <button onclick="adminTab('editor',this)" class="admin-tab whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">✏️ تعديل كل النصوص والصور</button>
+        <button onclick="adminTab('social',this)" class="admin-tab whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">📱 روابط التواصل والأرقام</button>
+        <button onclick="adminTab('products',this)" class="admin-tab whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">👟 إدارة المنتجات</button>
+        <button onclick="adminTab('marketing',this)" class="admin-tab whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">🔥 العروض والخصومات</button>
+        <button onclick="adminTab('orders',this)" class="admin-tab whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">🧾 الطلبات والتقييمات</button>
+        <button onclick="adminTab('security',this)" class="admin-tab whitespace-nowrap text-right font-black text-sm px-4 py-3 rounded-xl bg-neutral-100 hover:bg-amber-100 transition">🔐 الأمان والرفع على النت</button>
+      </div>
+      <div class="p-4 md:p-6 content-max">
+
+        <!-- GENERAL -->
+        <div id="at-general" class="admin-pane space-y-4">
+          <h4 class="font-black text-lg">🏪 لوحة القيادة — إحصائيات سريعة</h4>
+          <div id="adminStats" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+          <div class="bg-gradient-to-l from-amber-500 to-amber-600 rounded-2xl p-5 text-black">
+            <h5 class="font-black mb-2">⚡ تحكم سريع — أي حرف وأي صورة</h5>
+            <p class="text-sm font-bold text-black/70 mb-3">عندك طريقتين للتعديل: (1) من تبويب "تعديل كل النصوص والصور" — كل حاجة مكتوبة في الموقع قدامك في خانات. (2) زر "تعديل مباشر من الموقع" — تدوس على أي كلمة أو صورة في الصفحة وتغيرها فوراً.</p>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="adminTab('editor',document.querySelectorAll('.admin-tab')[1])" class="bg-black text-amber-400 font-black px-5 py-2.5 rounded-xl text-sm">✏️ افتح محرر النصوص والصور</button>
+              <button onclick="toggleEditMode(true);closeAdmin()" class="bg-white font-black px-5 py-2.5 rounded-xl text-sm">🖊️ فعّل التعديل المباشر الآن</button>
+              <button onclick="downloadSiteZip()" class="bg-green-700 text-white font-black px-5 py-2.5 rounded-xl text-sm">⬇️ تحميل الموقع ZIP</button>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div><label class="text-xs font-black text-neutral-500">اسم المتجر</label><input id="s_storeName" class="w-full border-2 rounded-xl px-4 py-2.5 bg-white font-bold"></div>
+            <div><label class="text-xs font-black text-neutral-500">السطر التعريفي</label><input id="s_tagline" class="w-full border-2 rounded-xl px-4 py-2.5 bg-white"></div>
+          </div>
+          <div class="grid md:grid-cols-3 gap-3">
+            <div><label class="text-xs font-black text-neutral-500">العنوان</label><input id="s_address" class="w-full border-2 rounded-xl px-4 py-2.5 bg-white"></div>
+            <div><label class="text-xs font-black text-neutral-500">مواعيد العمل</label><input id="s_hours" class="w-full border-2 rounded-xl px-4 py-2.5 bg-white"></div>
+            <div><label class="text-xs font-black text-neutral-500">رقم الهاتف المعروض</label><input id="s_phone" class="w-full border-2 rounded-xl px-4 py-2.5 bg-white" dir="ltr"></div>
+          </div>
+          <button onclick="saveGeneral()" class="bg-green-600 text-white font-black px-8 py-3 rounded-xl hover:bg-green-700 transition">💾 حفظ البيانات</button>
+        </div>
+
+        <!-- EDITOR -->
+        <div id="at-editor" class="admin-pane hidden space-y-4">
+          <h4 class="font-black text-lg">✏️ محرر شامل — غيّر أي حرف وأي صورة</h4>
+          <p class="text-xs text-neutral-600 font-bold bg-blue-50 border-2 border-blue-200 rounded-xl p-3">💡 كل سطر مكتوب في الموقع موجود هنا في خانة. عدّل أي خانة ودوس "حفظ كل التعديلات" — التغيير بيظهر فوراً وبيتحفظ حتى بعد قفل المتصفح والرفع على النت. للصور: الصق رابط صورة أو ارفع من جهازك.</p>
+          <div class="flex gap-2 flex-wrap">
+            <button onclick="saveEditor()" class="bg-green-600 text-white font-black px-8 py-3 rounded-xl hover:bg-green-700">💾 حفظ كل التعديلات</button>
+            <button onclick="toggleEditMode(true);closeAdmin()" class="bg-neutral-900 text-white font-black px-6 py-3 rounded-xl">🖊️ أو عدّل بالضغط مباشرة على الموقع</button>
+          </div>
+          <div id="editorGroups" class="space-y-4"></div>
+          <button onclick="saveEditor()" class="bg-green-600 text-white font-black px-8 py-3 rounded-xl hover:bg-green-700 w-full md:w-auto">💾 حفظ كل التعديلات</button>
+        </div>
+
+        <!-- SOCIAL -->
+        <div id="at-social" class="admin-pane hidden space-y-4">
+          <h4 class="font-black text-lg">📱 روابط التواصل والأرقام — العميل يوصلك بضغطة</h4>
+          <p class="text-xs text-neutral-600 font-bold bg-amber-50 border-2 border-amber-200 rounded-xl p-3">💡 ضع روابط صفحاتك هنا وستظهر تلقائياً في قسم التواصل والأزرار العائمة والفوتر. اترك أي حقل فارغاً لإخفاء زرّه من المتجر.</p>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-white rounded-xl p-3 border-2">
+              <label class="text-xs font-black text-green-600"><i class="fab fa-whatsapp"></i> رقم الواتساب (بكود الدولة بدون +) *</label>
+              <input id="s_whatsapp" dir="ltr" placeholder="201012345678" class="w-full border rounded-lg px-3 py-2 mt-1 font-bold">
+            </div>
+            <div class="bg-white rounded-xl p-3 border-2">
+              <label class="text-xs font-black text-blue-600"><i class="fab fa-facebook"></i> رابط فيسبوك</label>
+              <input id="s_facebook" dir="ltr" placeholder="https://facebook.com/..." class="w-full border rounded-lg px-3 py-2 mt-1">
+            </div>
+            <div class="bg-white rounded-xl p-3 border-2">
+              <label class="text-xs font-black text-sky-500"><i class="fab fa-telegram"></i> رابط تليجرام</label>
+              <input id="s_telegram" dir="ltr" placeholder="https://t.me/..." class="w-full border rounded-lg px-3 py-2 mt-1">
+            </div>
+            <div class="bg-white rounded-xl p-3 border-2">
+              <label class="text-xs font-black text-pink-600"><i class="fab fa-instagram"></i> رابط انستجرام</label>
+              <input id="s_instagram" dir="ltr" placeholder="https://instagram.com/..." class="w-full border rounded-lg px-3 py-2 mt-1">
+            </div>
+            <div class="bg-white rounded-xl p-3 border-2">
+              <label class="text-xs font-black text-neutral-900"><i class="fab fa-tiktok"></i> رابط تيك توك</label>
+              <input id="s_tiktok" dir="ltr" placeholder="https://tiktok.com/@..." class="w-full border rounded-lg px-3 py-2 mt-1">
+            </div>
+            <div class="bg-white rounded-xl p-3 border-2">
+              <label class="text-xs font-black text-red-500"><i class="fab fa-google"></i> رابط جوجل (النشاط التجاري / الخرائط)</label>
+              <input id="s_google" dir="ltr" placeholder="https://g.page/..." class="w-full border rounded-lg px-3 py-2 mt-1">
+            </div>
+          </div>
+          <button onclick="saveSocial()" class="bg-green-600 text-white font-black px-8 py-3 rounded-xl hover:bg-green-700 transition">💾 حفظ الروابط</button>
+        </div>
+
+        <!-- PRODUCTS -->
+        <div id="at-products" class="admin-pane hidden space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h4 class="font-black text-lg">👟 إدارة المنتجات (<span id="admProdCount">0</span>)</h4>
+            <button onclick="openProductEditor()" class="bg-amber-500 text-black font-black px-5 py-2.5 rounded-xl hover:bg-amber-400 transition">+ إضافة منتج جديد</button>
+          </div>
+          <div id="adminProdList" class="space-y-2"></div>
+          <div id="prodEditor" class="hidden bg-white rounded-2xl border-2 border-amber-300 p-4 space-y-3">
+            <h5 id="peTitle" class="font-black">إضافة منتج جديد</h5>
+            <input type="hidden" id="peId">
+            <div class="grid md:grid-cols-2 gap-3">
+              <input id="peName" class="border-2 rounded-xl px-3 py-2 font-bold" placeholder="اسم المنتج *">
+              <input id="peCat" list="catList" class="border-2 rounded-xl px-3 py-2 font-bold" placeholder="التصنيف (رجالي / حريمي / أطفالي / رياضي / كلاسيك / طبي)">
+              <datalist id="catList">
+                <option value="رجالي"></option><option value="حريمي"></option><option value="أطفالي"></option>
+                <option value="رياضي"></option><option value="كلاسيك"></option><option value="طبي"></option>
+              </datalist>
+            </div>
+            <textarea id="peDesc" rows="2" class="w-full border-2 rounded-xl px-3 py-2" placeholder="وصف المنتج"></textarea>
+            <div class="grid grid-cols-3 gap-3">
+              <input id="pePrice" type="number" class="border-2 rounded-xl px-3 py-2 font-bold" placeholder="السعر *">
+              <input id="peOld" type="number" class="border-2 rounded-xl px-3 py-2" placeholder="السعر قبل الخصم">
+              <input id="peStock" type="number" class="border-2 rounded-xl px-3 py-2" placeholder="المخزون">
+            </div>
+            <div class="grid md:grid-cols-3 gap-3">
+              <input id="peSizes" class="border-2 rounded-xl px-3 py-2" placeholder="المقاسات (مثال: 40,41,42,43)">
+              <input id="peBadge" class="border-2 rounded-xl px-3 py-2" placeholder="شارة (مثال: جديد 🔥)">
+              <input id="peColors" class="border-2 rounded-xl px-3 py-2" dir="ltr" placeholder="ألوان hex مفصولة بفاصلة">
+            </div>
+            <div>
+              <label class="text-xs font-black">صورة المنتج:</label>
+              <input id="peImg" dir="ltr" class="w-full border-2 rounded-xl px-3 py-2 mb-2 text-sm" placeholder="رابط الصورة https://...">
+              <div class="flex items-center gap-3">
+                <label class="cursor-pointer bg-neutral-900 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-amber-600">📤 أو ارفع صورة من جهازك
+                  <input id="peFile" type="file" accept="image/*" class="hidden" onchange="previewUpload(this)">
+                </label>
+                <img id="pePreview" class="w-16 h-16 rounded-xl object-cover border hidden" alt="">
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="saveProduct()" class="flex-1 bg-green-600 text-white font-black py-3 rounded-xl">💾 حفظ المنتج</button>
+              <button onclick="document.getElementById('prodEditor').classList.add('hidden')" class="px-6 bg-neutral-200 font-bold rounded-xl">إلغاء</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MARKETING -->
+        <div id="at-marketing" class="admin-pane hidden space-y-4">
+          <h4 class="font-black text-lg">🔥 العروض والخصومات والشريط المتحرك</h4>
+          <div class="bg-white rounded-xl border-2 p-4 space-y-3">
+            <h5 class="font-black text-sm">🎯 بانر العرض الرئيسي</h5>
+            <div><label class="text-xs font-black text-neutral-500">عنوان العرض</label><input id="s_offerTitle" class="w-full border-2 rounded-xl px-4 py-2.5 bg-neutral-50 font-bold"></div>
+            <div><label class="text-xs font-black text-neutral-500">وصف العرض</label><textarea id="s_offerDesc" rows="2" class="w-full border-2 rounded-xl px-4 py-2.5 bg-neutral-50"></textarea></div>
+            <div><label class="text-xs font-black text-neutral-500">نص شارة العرض (قبل العداد)</label><input id="s_offerBadge" class="w-full border-2 rounded-xl px-4 py-2.5 bg-neutral-50 font-bold"></div>
+          </div>
+          <div class="bg-white rounded-xl border-2 p-4 space-y-3">
+            <h5 class="font-black text-sm">📢 الشريط المتحرك (افصل الجمل بعلامة •)</h5>
+            <textarea id="s_marquee" rows="3" class="w-full border-2 rounded-xl px-4 py-2.5 bg-neutral-50 text-sm font-bold"></textarea>
+          </div>
+          <div class="bg-white rounded-xl border-2 p-4 space-y-3">
+            <h5 class="font-black text-sm">🎟️ أكواد الخصم</h5>
+            <div id="couponList" class="space-y-2"></div>
+            <div class="flex gap-2">
+              <input id="newCouponCode" class="flex-1 border-2 rounded-xl px-3 py-2 font-bold" placeholder="الكود (مثال: 3H30)">
+              <input id="newCouponPct" type="number" class="w-28 border-2 rounded-xl px-3 py-2 font-bold" placeholder="%">
+              <button onclick="addCoupon()" class="bg-neutral-900 text-white px-5 rounded-xl font-bold">+ إضافة</button>
+            </div>
+          </div>
+          <button onclick="saveMarketing()" class="bg-green-600 text-white font-black px-8 py-3 rounded-xl">💾 حفظ العروض</button>
+        </div>
+
+        <!-- ORDERS -->
+        <div id="at-orders" class="admin-pane hidden space-y-4">
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h4 class="font-black text-lg">🧾 الطلبات الواردة (<span id="admOrderCount">0</span>)</h4>
+            <div class="flex gap-2">
+              <button onclick="exportOrders()" class="text-xs bg-blue-100 text-blue-700 px-3 py-2 rounded-lg font-bold">⬇️ تصدير الطلبات</button>
+              <button onclick="clearOrders()" class="text-xs bg-red-100 text-red-600 px-3 py-2 rounded-lg font-bold">مسح الكل</button>
+            </div>
+          </div>
+          <div id="adminOrderList" class="space-y-2"></div>
+          <h4 class="font-black text-lg pt-2">⭐ إدارة التقييمات (<span id="admRevCount">0</span>)</h4>
+          <div id="adminReviewList" class="space-y-2"></div>
+        </div>
+
+        <!-- SECURITY -->
+        <div id="at-security" class="admin-pane hidden space-y-4">
+          <h4 class="font-black text-lg">🔐 الأمان والنسخ الاحتياطي والرفع على النت</h4>
+          <div class="bg-white rounded-xl p-4 border-2">
+            <label class="text-xs font-black">تغيير الرقم السري للوحة</label>
+            <div class="flex gap-2 mt-2">
+              <input id="newPass" class="flex-1 border-2 rounded-xl px-3 py-2 font-bold" placeholder="رقم سري جديد">
+              <button onclick="changePass()" class="bg-neutral-900 text-white px-5 rounded-xl font-bold">تغيير</button>
+            </div>
+            <p class="text-[11px] text-neutral-500 font-bold mt-2">الرقم السري الرئيسي (01007836636kkkkk) يعمل دائماً كمفتاح رئيسي. بعد التغيير استخدم الجديد.</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-600 to-emerald-700 text-white rounded-xl p-5">
+            <h5 class="font-black mb-2">⬇️ تحميل الموقع بالكامل (ZIP)</h5>
+            <p class="text-sm font-semibold mb-3">اضغط الزر وهينزل لك ملف ZIP فيه <b dir="ltr">index.html</b> كامل المتجر بكل بياناتك الحالية (النصوص + الصور + المنتجات + أكواد الخصم). ارفعه على أي استضافة وهو يعمل فوراً.</p>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="downloadSiteZip()" class="bg-black text-white font-black px-6 py-3 rounded-xl">⬇️ تحميل ZIP كامل</button>
+              <button onclick="downloadStandaloneHtml()" class="bg-white text-green-800 font-black px-6 py-3 rounded-xl">⬇️ تحميل index.html فقط</button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-4 border-2">
+            <h5 class="font-black text-sm mb-2">💾 نسخة احتياطية من البيانات (JSON)</h5>
+            <p class="text-xs text-neutral-500 font-bold mb-2">حمّل نسخة من كل بياناتك (النصوص + الصور + المنتجات + الطلبات + الروابط) واحتفظ بها. لو غيّرت المتصفح أو الجهاز ارفع النسخة لاسترجاع كل شيء.</p>
+            <div class="flex gap-2 flex-wrap">
+              <button onclick="exportData()" class="bg-blue-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl">⬇️ تحميل نسخة</button>
+              <label class="cursor-pointer bg-amber-500 text-black text-sm font-bold px-5 py-2.5 rounded-xl">⬆️ استعادة نسخة
+                <input type="file" accept=".json" class="hidden" onchange="importData(this)">
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-xl p-5">
+            <h5 class="font-black mb-2">🚀 إزاي ترفع المتجر على النت؟ (خطوات سهلة)</h5>
+            <ol class="text-sm font-semibold space-y-2 leading-relaxed list-decimal pr-5">
+              <li>دوس زر <b>"تحميل ZIP كامل"</b> فوق — هينزللك ملف فيه الموقع كامل.</li>
+              <li>فك ضغط الملف على جهازك، هتلاقي <b dir="ltr">index.html</b>.</li>
+              <li>ادخل على <b dir="ltr">netlify.com</b> أو <b dir="ltr">vercel.com</b> أو <b dir="ltr">tiiny.host</b> (مجاني) واسحب الملف هناك — هيطلعلك رابط موقعك فوراً.</li>
+              <li>أو لو عندك استضافة cPanel: ارفع الملف في مجلد <b dir="ltr">public_html</b>.</li>
+              <li>بعد الرفع: افتح موقعك → دوس ⚙️ → ادخل رقمك السري → عدّل الروابط والأرقام والنصوص والصور → دوس حفظ.</li>
+              <li>⚠️ مهم: البيانات بتتحفظ في متصفحك (LocalStorage). عشان تنقلها لجهاز تاني استخدم "تحميل نسخة" ثم "استعادة نسخة".</li>
+            </ol>
+          </div>
+
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-4">
+            <h5 class="font-black text-sm text-red-700 mb-1">⚠️ منطقة الخطر</h5>
+            <button onclick="resetStore()" class="bg-red-500 text-white text-sm font-bold px-5 py-2.5 rounded-xl">إعادة ضبط المتجر بالكامل</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toastWrap" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[100] flex flex-col gap-2 items-center w-full px-4 pointer-events-none"></div>
+
+<script>
+/* ================= DATA ================= */
+const LS_S='h3_settings_v2', LS_P='h3_products_v2', LS_C='h3_cart', LS_W='h3_wish',
+      LS_O='h3_orders', LS_R='h3_reviews', LS_PW='h3_pw', LS_CP='h3_coupons', LS_SEED='h3_seeded';
+const MASTER_PW='01007836636kkkkk';
+
+const defaultSettings={
+  storeName:'مصنع 3H للأحذية', tagline:'صناعة مصرية فاخرة • جملة وقطاعي',
+  announce:'🔥 خصم حتى 30% على تشكيلة الشتاء + شحن مجاني للطلبات فوق 1000 جنيه — اطلب الآن عبر واتساب',
+  heroBadge:'مصنع معتمد • توصيل لجميع المحافظات',
+  heroTitleA:'خطوتك تبدأ من', heroTitleB:'مصنع 3H', heroTitleC:'فخامة تدوم.. سعر المصنع',
+  heroSub:'أكبر تشكيلة أحذية رجالي وحريمي وأطفالي بجودة التصدير. اطلب قطاعي أو جملة مباشرة من المصنع بدون وسيط، وتواصل معنا واتساب فوراً.',
+  heroBtnShop:'تسوق الآن', heroBtnWhats:'اطلب واتساب', heroBtnFactory:'جولة في المصنع',
+  stat1Num:15, stat1Label:'سنة خبرة', stat2Num:50000, stat2Label:'عميل سعيد', stat3Num:200, stat3Label:'موديل',
+  heroSlide1:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1600&auto=format&fit=crop',
+  heroSlide2:'https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?q=80&w=1600&auto=format&fit=crop',
+  heroSlide3:'https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1600&auto=format&fit=crop',
+  heroMainImg:'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop',
+  heroCardName:'الأكثر مبيعاً 🔥', heroCardPrice:'450 ج.م', heroRatingText:'⭐ 4.9 تقييم عملائنا',
+  marquee:'🚚 شحن سريع لكل المحافظات • ✅ دفع عند الاستلام • 🔄 استبدال واسترجاع خلال 14 يوم • 🏭 سعر المصنع مباشرة • ⭐ خامات مستوردة فاخرة • 📦 خصومات خاصة للجملة والموزعين',
+  shopBadge:'— تشكيلتنا المميزة —', shopTitleA:'تسوق من', shopTitleB:'مصنع 3H', shopTitleC:'مباشرة',
+  shopSub:'كل الموديلات متوفرة جملة وقطاعي • اختر مقاسك واطلب بضغطة واحدة',
+  offerBadge:'عرض محدود 🔥 ينتهي خلال', offerTitle:'اشترِ قطعتين واحصل على الثالثة بنصف الثمن',
+  offerDesc:'العرض ساري على جميع الموديلات الرياضية والكاجوال حتى نفاد الكمية. الكمية محدودة في المخزن!',
+  offerImg:'https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=800&auto=format&fit=crop',
+  factoryBadge:'— 🏭 مصنع 3H للتصنيع —', factoryTitleA:'من خط الإنتاج', factoryTitleB:'لباب بيتك', factoryTitleC:'مباشرة',
+  factoryDesc:'نمتلك أحدث خطوط الإنتاج في مصر: حقن، خياطة، لزق حراري، وفينيش يدوي فاخر. ننتج أكثر من 5000 زوج يومياً بخامات مستوردة، ونورّد لكبرى المحلات والبراندات. تعامل مع المصنع مباشرة ووفّر فرق الوسيط.',
+  fac1:'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=600&auto=format&fit=crop',
+  fac2:'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=600&auto=format&fit=crop',
+  fac3:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop',
+  fac4:'https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=600&auto=format&fit=crop',
+  wholesaleTitle:'أسعار خاصة للجملة والمحلات 🔥',
+  wholesaleDesc:'امتلك مشروعك مع 3H: أقل كمية دستة مشكلة، شحن لكل المحافظات، إمكانية التصنيع باسم البراند الخاص بك.',
+  wholesaleF1:'خصم يصل لـ 45% على كميات الجملة', wholesaleF2:'تشكيل جديد كل أسبوع + صور احترافية مجانية',
+  wholesaleF3:'استبدال المقاسات الراكدة (بشروط التعاقد)',
+  reviewsBadge:'— قالوا عنا —', reviewsTitle:'تقييمات حقيقية من عملائنا ⭐',
+  contactBadge:'— كلمنا في أي وقت —', contactTitleA:'تواصل مع', contactTitleB:'مصنع 3H', contactTitleC:'مباشرة',
+  contactSub:'متاحون يومياً من 10 صباحاً حتى 11 مساءً • رد فوري على الواتساب',
+  address:'القاهرة، مصر — المنطقة الصناعية، شارع المصانع', hours:'يومياً من 10 صباحاً حتى 11 مساءً',
+  phone:'01000000000', whatsapp:'201000000000', facebook:'https://facebook.com',
+  telegram:'', instagram:'', tiktok:'', google:'https://google.com',
+  footerAbout:'مصنع مصري متخصص في تصنيع الأحذية الرجالي والحريمي والأطفالي بخامات فاخرة وأسعار المصنع مباشرة. جملة وقطاعي لجميع المحافظات.',
+  copyright:'© 2026 مصنع 3H لتصنيع الأحذية — جميع الحقوق محفوظة | صُنع بحُب في مصر 🇪🇬'
+};
+
+const defaultProducts=[
+{id:1,name:'سنيكرز 3H سبورت برو — أحمر ناري',desc:'خامة شبكية مستوردة تسمح بالتهوية + نعل طبي خفيف مضاد للانزلاق. مثالي للجيم والمشاوير اليومية.',price:450,old:650,category:'رياضي',sizes:[40,41,42,43,44,45],colors:['#dc2626','#111111','#ffffff'],img:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop',badge:'الأكثر مبيعاً 🔥',rating:4.9,stock:40,reviews:320},
+{id:2,name:'كلاسيك جلد طبيعي — بني فاخر',desc:'جلد طبيعي 100% مدبوغ يدوياً، نعل جلد مخيط، فينيش إيطالي. أناقة تدوم لسنوات.',price:850,old:1200,category:'كلاسيك',sizes:[40,41,42,43,44,45,46],colors:['#78350f','#111111'],img:'https://images.unsplash.com/photo-1449505278894-297fdb3edbc1?q=80&w=600&auto=format&fit=crop',badge:'جلد طبيعي 🐄',rating:5,stock:25,reviews:180},
+{id:3,name:'كوتشي أبيض إير — يونيسكس',desc:'الترند العالمي بجودة 3H: خفيف، مريح، سهل التنظيف. يناسب كل اللبس.',price:520,old:750,category:'رياضي',sizes:[37,38,39,40,41,42,43,44,45],colors:['#ffffff','#111111'],img:'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop',badge:'ترند 2026 ✨',rating:4.8,stock:60,reviews:450},
+{id:4,name:'حذاء حريمي كعب مريح — بيج',desc:'كعب متوسط مريح للشغل والمناسبات، بطانة سيليكون تمنع الألم. شياكة بدون تعب.',price:480,old:680,category:'حريمي',sizes:[36,37,38,39,40,41],colors:['#d4a373','#111111','#f5f5f5'],img:'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=600&auto=format&fit=crop',badge:'جديد 💎',rating:4.7,stock:30,reviews:95},
+{id:5,name:'سنيكرز أصفر نابض — شبابي',desc:'ألوان جريئة وخامة مقاومة للمياه. كن مختلفاً مع إصدار الشباب المحدود.',price:495,old:700,category:'رجالي',sizes:[40,41,42,43,44,45],colors:['#facc15','#111111'],img:'https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=600&auto=format&fit=crop',badge:'إصدار محدود ⚡',rating:4.6,stock:20,reviews:140},
+{id:6,name:'حذاء أطفالي مضيء — ديناصور',desc:'نعل مضيء LED يحبه الأطفال + خامة مرنة آمنة. متوفر بمقاسات الأطفال كاملة.',price:320,old:450,category:'أطفالي',sizes:[28,29,30,31,32,33,34,35],colors:['#22c55e','#3b82f6','#ef4444'],img:'https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=600&auto=format&fit=crop',badge:'يحبه الأطفال 🦕',rating:4.9,stock:50,reviews:210},
+{id:7,name:'سليبر طبي ميموري فوم',desc:'نعل ميموري فوم طبي يعالج آلام الكعب والظهر. خامة تسمح بالتهوية طوال اليوم.',price:380,old:550,category:'طبي',sizes:[39,40,41,42,43,44,45],colors:['#6b7280','#111111','#1e3a8a'],img:'https://images.unsplash.com/photo-1603487742131-4160ec999306?q=80&w=600&auto=format&fit=crop',badge:'طبي معتمد ✅',rating:4.8,stock:35,reviews:175},
+{id:8,name:'بوت شتوي جلد — أسود',desc:'بطانة فرو داخلية تدفئة + نعل مقاوم للمياه والانزلاق. رفيقك في الشتاء.',price:750,old:1050,category:'رجالي',sizes:[40,41,42,43,44,45],colors:['#111111','#451a03'],img:'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?q=80&w=600&auto=format&fit=crop',badge:'شتاء دافئ ❄️',rating:4.7,stock:22,reviews:88},
+{id:9,name:'كاجوال قماش — كحلي',desc:'خفيف كالريشة للاستخدام اليومي، نعل مرن، ألوان عصرية تناسب الجينز.',price:350,old:500,category:'رجالي',sizes:[40,41,42,43,44,45],colors:['#1e3a8a','#111111','#f5f5f5'],img:'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=600&auto=format&fit=crop',badge:'سعر المصنع 🏭',rating:4.5,stock:70,reviews:260},
+{id:10,name:'سنيكرز رانينج برو — احترافي',desc:'مصمم للعدائين: امتصاص صدمات، تهوية، وخفة استثنائية. اختبر الفرق.',price:620,old:900,category:'رياضي',sizes:[40,41,42,43,44,45,46],colors:['#111111','#f59e0b'],img:'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600&auto=format&fit=crop',badge:'للمحترفين 🏃',rating:4.9,stock:28,reviews:195},
+{id:11,name:'حذاء حريمي سنيكرز — وردي',desc:'ستايل رياضي أنيق للبنات، ألوان باستيل هادئة، راحة طوال اليوم.',price:440,old:620,category:'حريمي',sizes:[36,37,38,39,40,41],colors:['#f9a8d4','#ffffff'],img:'https://images.unsplash.com/photo-1597045566677-8cf032ed6634?q=80&w=600&auto=format&fit=crop',badge:'بناتي 🌸',rating:4.6,stock:32,reviews:120},
+{id:12,name:'جزمة أطفال مدرسية — جلد',desc:'تستحمل شقاوة المدرسة: جلد مقاوم، نعل مخيط لا ينفصل، ضمان سنة.',price:290,old:420,category:'أطفالي',sizes:[30,31,32,33,34,35,36],colors:['#111111','#7c2d12'],img:'https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=600&auto=format&fit=crop',badge:'ضمان سنة 🛡️',rating:4.8,stock:45,reviews:150}
+];
+
+const defaultReviews=[
+{n:'أحمد محمود — القاهرة',s:5,t:'الخامة فوق الممتازة والسعر أرخص من المحلات بكتير. طلبت 3 قطع جملة ووصلوني في يومين. تعامل راقي 👏'},
+{n:'سارة علي — الجيزة',s:5,t:'الكوتشي مريح جداً وشيك. المقاس مظبوط والتغليف كان تحفة. أكيد هطلب تاني ❤️'},
+{n:'محمد السيد — الإسكندرية',s:4,t:'أخدت دستة مشكلة لمحلي والزباين عجبهم الشغل جداً. الفينيش نضيف والأسعار منافسة. شكراً مصنع 3H 🏭'}
+];
+const defaultCoupons=[{code:'3H20',pct:20},{code:'AHLAN10',pct:10}];
+
+const EDITOR_GROUPS=[
+{title:'🏪 الهيدر والشريط العلوي',fields:[{k:'storeName',l:'اسم المتجر'},{k:'tagline',l:'السطر التعريفي تحت الاسم'},{k:'announce',l:'نص شريط الإعلان العلوي',t:'textarea'}]},
+{title:'🔥 الواجهة الرئيسية (Hero)',fields:[
+{k:'heroBadge',l:'الشارة الصغيرة فوق العنوان'},{k:'heroTitleA',l:'العنوان - الجزء الأول'},
+{k:'heroTitleB',l:'العنوان - الجزء الذهبي (اسم المصنع)'},{k:'heroTitleC',l:'العنوان - الجزء الثاني'},
+{k:'heroSub',l:'وصف الواجهة',t:'textarea'},{k:'heroBtnShop',l:'نص زر التسوق'},
+{k:'heroBtnWhats',l:'نص زر الواتساب'},{k:'heroBtnFactory',l:'نص زر المصنع'}]},
+{title:'📊 أرقام الإحصائيات',fields:[
+{k:'stat1Num',l:'الرقم 1',t:'number'},{k:'stat1Label',l:'وصف الرقم 1'},
+{k:'stat2Num',l:'الرقم 2',t:'number'},{k:'stat2Label',l:'وصف الرقم 2'},
+{k:'stat3Num',l:'الرقم 3',t:'number'},{k:'stat3Label',l:'وصف الرقم 3'},
+{k:'heroCardName',l:'اسم كارت الأكثر مبيعاً'},{k:'heroCardPrice',l:'سعر كارت الأكثر مبيعاً'},
+{k:'heroRatingText',l:'نص التقييم العائم'}]},
+{title:'🛍️ قسم المتجر',fields:[
+{k:'shopBadge',l:'السطر الصغير فوق عنوان المتجر'},{k:'shopTitleA',l:'عنوان المتجر - جزء 1'},
+{k:'shopTitleB',l:'عنوان المتجر - جزء ذهبي'},{k:'shopTitleC',l:'عنوان المتجر - جزء 3'},
+{k:'shopSub',l:'وصف المتجر'}]},
+{title:'🎯 قسم العرض',fields:[
+{k:'offerBadge',l:'نص شارة العرض'},{k:'offerTitle',l:'عنوان العرض'},{k:'offerDesc',l:'وصف العرض',t:'textarea'}]},
+{title:'🏭 قسم المصنع',fields:[
+{k:'factoryBadge',l:'شارة المصنع'},{k:'factoryTitleA',l:'عنوان المصنع 1'},
+{k:'factoryTitleB',l:'عنوان المصنع 2 (ذهبي)'},{k:'factoryTitleC',l:'عنوان المصنع 3'},
+{k:'factoryDesc',l:'وصف المصنع',t:'textarea'}]},
+{title:'📦 قسم الجملة',fields:[
+{k:'wholesaleTitle',l:'عنوان الجملة'},{k:'wholesaleDesc',l:'وصف الجملة',t:'textarea'},
+{k:'wholesaleF1',l:'ميزة 1'},{k:'wholesaleF2',l:'ميزة 2'},{k:'wholesaleF3',l:'ميزة 3'}]},
+{title:'⭐📞 عناوين الأقسام والتواصل',fields:[
+{k:'reviewsBadge',l:'شارة التقييمات'},{k:'reviewsTitle',l:'عنوان التقييمات'},
+{k:'contactBadge',l:'شارة التواصل'},{k:'contactTitleA',l:'عنوان التواصل 1'},
+{k:'contactTitleB',l:'عنوان التواصل 2 (ذهبي)'},{k:'contactTitleC',l:'عنوان التواصل 3'},
+{k:'contactSub',l:'وصف التواصل'},{k:'address',l:'العنوان'},{k:'hours',l:'مواعيد العمل'},{k:'phone',l:'رقم الهاتف'}]},
+{title:'📢 الشريط المتحرك',fields:[{k:'marquee',l:'نص الشريط (افصل بعلامة •)',t:'textarea'}]},
+{title:'🦶 الفوتر',fields:[{k:'footerAbout',l:'وصف الفوتر',t:'textarea'},{k:'copyright',l:'سطر الحقوق'}]},
+{title:'🖼️ كل صور الموقع (رابط أو رفع)',fields:[
+{k:'heroSlide1',l:'صورة الواجهة 1 (خلفية)',t:'image'},{k:'heroSlide2',l:'صورة الواجهة 2 (خلفية)',t:'image'},
+{k:'heroSlide3',l:'صورة الواجهة 3 (خلفية)',t:'image'},{k:'heroMainImg',l:'الصورة الرئيسية العائمة',t:'image'},
+{k:'offerImg',l:'صورة بانر العرض',t:'image'},{k:'fac1',l:'صورة المصنع 1',t:'image'},
+{k:'fac2',l:'صورة المصنع 2',t:'image'},{k:'fac3',l:'صورة المصنع 3',t:'image'},{k:'fac4',l:'صورة المصنع 4',t:'image'}]}
+];
+
+/* ============ STORAGE ============ */
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):JSON.parse(JSON.stringify(d))}catch(e){return JSON.parse(JSON.stringify(d))}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast('مساحة التخزين ممتلئة — قلل حجم الصور','err')}}
+
+let S=Object.assign({},JSON.parse(JSON.stringify(defaultSettings)),load(LS_S,{}));
+let PRODUCTS=load(LS_P,defaultProducts), cart=load(LS_C,[]), wish=load(LS_W,[]),
+    orders=load(LS_O,[]), reviews=load(LS_R,defaultReviews), coupons=load(LS_CP,defaultCoupons);
+let activeCat='الكل', couponPct=0, pmId=null, pmSize=null, pmColor=null, pmQtyV=1,
+    editMode=false, isAdmin=false, pendingImgKey=null, pendingImgEl=null;
+if(!localStorage.getItem(LS_PW)) localStorage.setItem(LS_PW,MASTER_PW);
+
+/* ============ INIT ============ */
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('hide'),1000)});
+document.addEventListener('DOMContentLoaded',()=>{
+  applySettings(); renderProducts(); renderCart(); renderWish(); renderSocials();
+  renderReviews(); renderAdminProducts(); renderAdminOrders(); renderAdminReviews();
+  renderCoupons(); renderEditor(); renderStats(); initHero(); initReveal();
+  initCounters(); startTimer();
+  document.getElementById('searchBar').classList.add('hidden');
+  const mm=document.getElementById('mobileMenu'); mm.classList.add('hidden'); mm.classList.remove('flex');
+  initInlineEdit();
+});
+
+/* ============ TOAST ============ */
+function toast(msg,type='ok'){
+  const w=document.getElementById('toastWrap');
+  const t=document.createElement('div');
+  const bg=type==='ok'?'bg-neutral-900 text-white':type==='err'?'bg-red-600 text-white':'bg-amber-500 text-black';
+  t.className='toast '+bg+' font-bold text-sm px-6 py-3 rounded-2xl shadow-luxe pointer-events-auto flex items-center gap-2';
+  t.innerHTML=(type==='ok'?'✅ ':type==='err'?'⚠️ ':'🎉 ')+msg;
+  w.appendChild(t);
+  setTimeout(()=>{t.style.opacity='0';t.style.transform='translateY(10px)';setTimeout(()=>t.remove(),400)},2600);
+}
+function showSavedTick(){
+  const el=document.getElementById('savedTick');
+  el.classList.add('show'); clearTimeout(el._t);
+  el._t=setTimeout(()=>el.classList.remove('show'),1400);
+}
+
+/* ============ APPLY SETTINGS ============ */
+function applySettings(){
+  document.title=S.storeName+' | متجر 3H الرسمي';
+  document.querySelectorAll('[data-edit]').forEach(el=>{
+    const k=el.dataset.edit;
+    if(S[k]!==undefined&&S[k]!==null&&!el.isContentEditable) el.textContent=S[k];
+  });
+  document.querySelectorAll('[data-img]').forEach(el=>{const k=el.dataset.img; if(S[k]) el.src=S[k];});
+  const s1=document.getElementById('stat1Num'),s2=document.getElementById('stat2Num'),s3=document.getElementById('stat3Num');
+  if(s1){s1.dataset.target=S.stat1Num; s1.textContent='0';}
+  if(s2){s2.dataset.target=S.stat2Num; s2.textContent='0';}
+  if(s3){s3.dataset.target=S.stat3Num; s3.textContent='0';}
+  renderMarquee();
+}
+function renderMarquee(){
+  const parts=(S.marquee||'').split('•').map(s=>s.trim()).filter(Boolean);
+  const half=parts.map(p=>'<span class="whitespace-nowrap">'+p+'</span><span>•</span>').join('');
+  document.getElementById('marqueeTrack').innerHTML=half+half;
+}
+function waLink(msg){return 'https://wa.me/'+(S.whatsapp||'')+'?text='+encodeURIComponent(msg)}
+function orderViaWhats(msg){
+  if(!S.whatsapp){toast('ضع رقم الواتساب أولاً من لوحة التحكم','err');return}
+  window.open(waLink(msg),'_blank');
+}
+function sendQuick(){
+  const n=document.getElementById('quickName').value||'عميل';
+  const m=document.getElementById('quickMsg').value||'استفسار';
+  orderViaWhats('مرحباً '+S.storeName+' 👋\nالاسم: '+n+'\nالرسالة: '+m);
+}
+function sendWholesale(){
+  const n=document.getElementById('wsName').value,p=document.getElementById('wsPhone').value;
+  if(!n||!p){toast('من فضلك اكتب الاسم ورقم الموبايل','err');return}
+  const msg='🧾 طلب عرض سعر جملة — '+S.storeName+'\n👤 الاسم: '+n+'\n📱 الموبايل: '+p+
+    '\n📍 المحافظة: '+document.getElementById('wsCity').value+
+    '\n🏪 النوع: '+document.getElementById('wsType').value+
+    '\n📦 الكمية: '+document.getElementById('wsQty').value+
+    '\n📝 ملاحظات: '+document.getElementById('wsMsg').value;
+  orderViaWhats(msg);
+  toast('تم تجهيز طلبك! أكمل الإرسال في واتساب');
+}
+
+/* ============ SOCIALS ============ */
+function socialDefs(){
+  return [
+    {k:'whatsapp',n:'واتساب',i:'fab fa-whatsapp',c:'bg-[#25D366]',show:!!S.whatsapp,href:waLink('مرحباً '+S.storeName+'، عايز استفسر عن المنتجات 👋')},
+    {k:'facebook',n:'فيسبوك',i:'fab fa-facebook-f',c:'bg-[#1877F2]',show:!!S.facebook,href:S.facebook},
+    {k:'telegram',n:'تليجرام',i:'fab fa-telegram-plane',c:'bg-[#229ED9]',show:!!S.telegram,href:S.telegram},
+    {k:'instagram',n:'انستجرام',i:'fab fa-instagram',c:'bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600',show:!!S.instagram,href:S.instagram},
+    {k:'tiktok',n:'تيك توك',i:'fab fa-tiktok',c:'bg-black',show:!!S.tiktok,href:S.tiktok},
+    {k:'google',n:'جوجل',i:'fab fa-google',c:'bg-[#EA4335]',show:!!S.google,href:S.google}
+  ];
+}
+function renderSocials(){
+  const defs=socialDefs().filter(d=>d.show);
+  document.getElementById('socialGrid').innerHTML=defs.map(d=>
+    '<a href="'+d.href+'" target="_blank" rel="noopener" class="card-hover bg-white border-2 rounded-2xl p-5 text-center shadow-sm group">'+
+    '<div class="w-14 h-14 mx-auto '+d.c+' text-white rounded-2xl flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition"><i class="'+d.i+'"></i></div>'+
+    '<div class="font-black text-sm">'+d.n+'</div><div class="text-[11px] text-neutral-400 font-semibold">تابعنا / كلمنا</div></a>'
+  ).join('')||'<p class="col-span-full text-center text-neutral-400 font-bold py-6">لم يتم إضافة روابط بعد — أضفها من لوحة التحكم</p>';
+  document.getElementById('fabWrap').innerHTML=defs.map(d=>
+    '<a href="'+d.href+'" target="_blank" rel="noopener" title="'+d.n+'" class="fab-item '+d.c+' text-white w-12 h-12 rounded-full flex items-center justify-center shadow-luxe text-xl"><i class="'+d.i+'"></i></a>'
+  ).join('');
+  document.getElementById('footSocials').innerHTML=defs.map(d=>
+    '<a href="'+d.href+'" target="_blank" rel="noopener" class="'+d.c+' text-white w-10 h-10 rounded-xl flex items-center justify-center hover:scale-110 transition"><i class="'+d.i+'"></i></a>'
+  ).join('');
+}
+
+/* ============ PRODUCTS ============ */
+const catIcon={'الكل':'🛍️','رجالي':'👔','حريمي':'👠','أطفالي':'🧒','رياضي':'⚽','كلاسيك':'🤵','طبي':'🩺'};
+function getCats(){const set=new Set(PRODUCTS.map(p=>p.category).filter(Boolean));return ['الكل',...set]}
+function renderProducts(){
+  const cats=getCats();
+  if(!cats.includes(activeCat)) activeCat='الكل';
+  document.getElementById('catBar').innerHTML=cats.map(c=>
+    '<button onclick="setCat(\''+c+'\')" class="tab-btn '+(c===activeCat?'active':'')+' whitespace-nowrap font-black text-sm px-5 py-2.5 rounded-xl bg-white border-2 border-neutral-200 hover:border-amber-400 transition">'+(catIcon[c]||'👟')+' '+c+'</button>'
+  ).join('');
+  const q=(document.getElementById('searchInput')?.value||'').trim();
+  const sort=document.getElementById('sortSelect')?.value||'new';
+  let list=PRODUCTS.filter(p=>(activeCat==='الكل'||p.category===activeCat)&&(!q||p.name.includes(q)||(p.desc||'').includes(q)||(p.category||'').includes(q)));
+  if(sort==='low')list=[...list].sort((a,b)=>a.price-b.price);
+  if(sort==='high')list=[...list].sort((a,b)=>b.price-a.price);
+  if(sort==='pop')list=[...list].sort((a,b)=>(b.rating||0)-(a.rating||0));
+  document.getElementById('prodCount').textContent=list.length;
+  document.getElementById('productGrid').innerHTML=list.map(p=>{
+    const off=p.old?Math.round((1-p.price/p.old)*100):0;
+    const inW=wish.includes(p.id);
+    return '<div class="card-hover bg-white rounded-2xl overflow-hidden border shadow-sm flex flex-col">'+
+      '<div class="relative img-zoom cursor-pointer" onclick="openProduct('+p.id+')">'+
+      '<img src="'+p.img+'" loading="lazy" class="w-full h-44 md:h-60 object-cover" alt="'+p.name+'" onerror="this.src=\'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop\'">'+
+      (p.badge?'<span class="absolute top-2 right-2 bg-neutral-900/90 text-amber-400 text-[10px] md:text-[11px] font-black px-2.5 py-1 rounded-full">'+p.badge+'</span>':'')+
+      (off?'<span class="absolute top-2 left-2 bg-red-500 text-white text-[10px] md:text-[11px] font-black px-2.5 py-1 rounded-full">خصم '+off+'%</span>':'')+
+      '<button onclick="event.stopPropagation();toggleWish('+p.id+')" class="absolute bottom-2 left-2 w-9 h-9 rounded-full '+(inW?'bg-rose-500 text-white':'bg-white/90 text-neutral-500')+' flex items-center justify-center shadow hover:scale-110 transition"><i class="fa fa-heart"></i></button>'+
+      '</div><div class="p-3 md:p-4 flex flex-col flex-1">'+
+      '<div class="text-[11px] font-black text-amber-600">'+p.category+' • ⭐ '+(p.rating||5)+' ('+(p.reviews||0)+')</div>'+
+      '<h3 class="font-black text-sm md:text-base leading-snug my-1 cursor-pointer hover:text-amber-700 line-clamp-1" onclick="openProduct('+p.id+')">'+p.name+'</h3>'+
+      '<div class="flex items-center gap-2 mt-auto pt-2"><span class="font-black text-lg text-amber-700">'+p.price+' ج</span>'+(p.old?'<s class="text-xs text-neutral-400 font-bold">'+p.old+'</s>':'')+'</div>'+
+      '<div class="grid grid-cols-2 gap-1.5 mt-2">'+
+      '<button onclick="quickAdd('+p.id+')" class="bg-neutral-900 text-white text-xs md:text-sm font-black py-2.5 rounded-xl hover:bg-amber-600 transition"><i class="fa fa-cart-plus ml-1"></i>أضف للسلة</button>'+
+      '<button onclick="openProduct('+p.id+')" class="bg-amber-100 text-amber-800 text-xs md:text-sm font-black py-2.5 rounded-xl hover:bg-amber-200 transition">👁️ التفاصيل</button>'+
+      '</div></div></div>';
+  }).join('')||'<div class="col-span-full text-center py-16 text-neutral-400 font-bold">😕 لا توجد منتجات مطابقة — جرّب بحثاً آخر</div>';
+}
+function setCat(c){activeCat=c;renderProducts()}
+function toggleSearch(){document.getElementById('searchBar').classList.toggle('hidden')}
+function toggleMobileMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.classList.toggle('hidden'); m.classList.toggle('flex');
+}
+
+/* ---- product modal ---- */
+function openProduct(id){
+  const p=PRODUCTS.find(x=>x.id===id); if(!p)return;
+  pmId=id; pmQtyV=1;
+  pmSize=(p.sizes&&p.sizes[0])??null;
+  pmColor=(p.colors&&p.colors[0])??null;
+  document.getElementById('pmImg').src=p.img;
+  document.getElementById('pmName').textContent=p.name;
+  document.getElementById('pmCat').textContent=p.category+' • كود: 3H-'+p.id;
+  document.getElementById('pmDesc').textContent=p.desc||'';
+  document.getElementById('pmPrice').textContent=p.price+' ج.م';
+  document.getElementById('pmOld').textContent=p.old?p.old+' ج.م':'';
+  const off=document.getElementById('pmOff');
+  off.textContent=p.old?('وفّر '+(p.old-p.price)+' ج'):'';
+  off.style.display=p.old?'inline-block':'none';
+  const b=document.getElementById('pmBadge');
+  b.textContent=p.badge||''; b.style.display=p.badge?'block':'none';
+  const r=Math.round(p.rating||5);
+  document.getElementById('pmStars').innerHTML='★'.repeat(r)+'☆'.repeat(5-r)+' <span class="text-neutral-500 font-bold">('+(p.reviews||0)+' تقييم)</span>';
+  document.getElementById('pmQty').textContent='1';
+  document.getElementById('pmStock').textContent=(p.stock>0)?('✅ متوفر ('+p.stock+' قطعة)'):'❌ نفد المخزون';
+  document.getElementById('pmSizes').innerHTML=(p.sizes||[]).map(s=>
+    '<button onclick="pickSize('+s+',this)" class="size-btn '+(s===pmSize?'active':'')+' border-2 font-black text-sm min-w-[44px] h-10 px-2 rounded-xl hover:border-neutral-900 transition">'+s+'</button>'
+  ).join('')||'<span class="text-sm text-neutral-400">مقاس موحد</span>';
+  document.getElementById('pmColors').innerHTML=(p.colors||[]).map(c=>
+    '<div onclick="pickColor(\''+c+'\',this)" class="color-dot '+(c===pmColor?'active':'')+'" style="background:'+c+'"></div>'
+  ).join('')||'<span class="text-sm text-neutral-400">لون واحد</span>';
+  const m=document.getElementById('prodModal'); m.classList.remove('hidden'); m.classList.add('flex');
+}
+function closeProduct(){const m=document.getElementById('prodModal');m.classList.add('hidden');m.classList.remove('flex')}
+function pickSize(s,el){pmSize=s;document.querySelectorAll('#pmSizes .size-btn').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
+function pickColor(c,el){pmColor=c;document.querySelectorAll('#pmColors .color-dot').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
+function pmQtyChange(d){pmQtyV=Math.max(1,Math.min(20,pmQtyV+d));document.getElementById('pmQty').textContent=pmQtyV}
+function addToCartFromModal(){addToCart(pmId,pmSize,pmColor,pmQtyV);closeProduct();toggleCart(true)}
+function buyNowFromModal(){addToCart(pmId,pmSize,pmColor,pmQtyV,true);closeProduct();orderCartViaWhats()}
+
+/* ============ CART ============ */
+function quickAdd(id){const p=PRODUCTS.find(x=>x.id===id);addToCart(id,p.sizes?p.sizes[0]:null,p.colors?p.colors[0]:null,1)}
+function addToCart(id,size,color,qty=1,silent=false){
+  const ex=cart.find(c=>c.id===id&&c.size===size&&c.color===color);
+  if(ex)ex.qty+=qty; else cart.push({id,size,color,qty});
+  save(LS_C,cart); renderCart();
+  if(!silent)toast('تمت الإضافة للسلة 🛒');
+}
+function cartQty(id,size,color,d){
+  const it=cart.find(c=>c.id===id&&c.size===size&&c.color===color);
+  if(!it)return;
+  it.qty+=d;
+  if(it.qty<1)cart=cart.filter(c=>c!==it);
+  save(LS_C,cart); renderCart();
+}
+function removeCart(i){cart.splice(i,1);save(LS_C,cart);renderCart()}
+function totals(){
+  const sub=cart.reduce((s,c)=>{const p=PRODUCTS.find(x=>x.id===c.id);return s+(p?p.price*c.qty:0)},0);
+  const disc=Math.round(sub*couponPct/100);
+  return {sub,disc,grand:sub-disc};
+}
+function applyCoupon(){
+  const v=document.getElementById('couponInput').value.trim().toUpperCase();
+  if(!v){couponPct=0;renderCart();return}
+  const f=coupons.find(c=>c.code.toUpperCase()===v);
+  if(f){couponPct=f.pct;toast('تم تطبيق خصم '+f.pct+'% 🎉','sale')}
+  else{toast('كود غير صحيح','err');return}
+  renderCart();
+}
+function renderCart(){
+  const n=cart.reduce((s,c)=>s+c.qty,0);
+  document.getElementById('cartCount').textContent=n;
+  document.getElementById('cartCountM').textContent=n;
+  document.getElementById('cartDrawerCount').textContent=n;
+  document.getElementById('cartItems').innerHTML=cart.map((c,i)=>{
+    const p=PRODUCTS.find(x=>x.id===c.id); if(!p)return '';
+    const sz=JSON.stringify(c.size===undefined?null:c.size);
+    const col=(c.color||'');
+    return '<div class="bg-white rounded-2xl p-3 flex gap-3 border shadow-sm">'+
+      '<img src="'+p.img+'" class="w-20 h-20 rounded-xl object-cover shrink-0" alt="">'+
+      '<div class="flex-1 min-w-0"><div class="font-black text-sm leading-snug truncate">'+p.name+'</div>'+
+      '<div class="text-[11px] text-neutral-500 font-bold">مقاس: '+(c.size??'—')+(c.color?' • <span class="inline-block w-3 h-3 rounded-full border align-middle" style="background:'+c.color+'"></span>':'')+'</div>'+
+      '<div class="flex items-center justify-between mt-2">'+
+      '<div class="flex items-center border rounded-lg overflow-hidden">'+
+      '<button onclick="cartQty('+c.id+','+sz+',\''+col+'\',-1)" class="w-7 h-7 font-black hover:bg-neutral-100">−</button>'+
+      '<span class="w-8 text-center font-black text-sm">'+c.qty+'</span>'+
+      '<button onclick="cartQty('+c.id+','+sz+',\''+col+'\',1)" class="w-7 h-7 font-black hover:bg-neutral-100">+</button>'+
+      '</div><div class="font-black text-amber-700 text-sm">'+(p.price*c.qty)+' ج</div></div></div>'+
+      '<button onclick="removeCart('+i+')" class="text-neutral-300 hover:text-red-500 self-start"><i class="fa fa-trash"></i></button></div>';
+  }).join('')||'<div class="text-center py-16 text-neutral-400"><div class="text-6xl mb-3">🛒</div>'+
+    '<div class="font-black">سلتك فاضية</div><div class="text-sm">اختار من تشكيلتنا المميزة 👇</div>'+
+    '<button onclick="toggleCart(false);document.getElementById(\'shop\').scrollIntoView({behavior:\'smooth\'})" class="mt-4 bg-neutral-900 text-white font-bold px-6 py-2.5 rounded-xl">تسوق الآن</button></div>';
+  const t=totals();
+  document.getElementById('subTotal').textContent=t.sub+' ج.م';
+  const dr=document.getElementById('discountRow');
+  if(t.disc){dr.style.display='flex'} else {dr.style.display='none'}
+  document.getElementById('discountVal').textContent='-'+t.disc+' ج.م';
+  document.getElementById('grandTotal').textContent=t.grand+' ج.م';
+  document.getElementById('coTotal').textContent=t.grand+' ج.م + الشحن';
+}
+function toggleCart(open){
+  const d=document.getElementById('cartDrawer'),o=document.getElementById('cartOverlay');
+  if(open){d.style.transform='translateX(0)';o.classList.remove('hidden');document.body.style.overflow='hidden'}
+  else{d.style.transform='translateX(-110%)';o.classList.add('hidden');document.body.style.overflow=''}
+}
+function orderCartViaWhats(){
+  if(!cart.length){toast('السلة فاضية! أضف منتجات أولاً','err');return}
+  let msg='🧾 طلب جديد من '+S.storeName+'\n━━━━━━━━━━━━\n';
+  cart.forEach((c,i)=>{const p=PRODUCTS.find(x=>x.id===c.id);msg+=(i+1)+') '+p.name+'\n مقاس:'+c.size+' | كمية:'+c.qty+' | '+(p.price*c.qty)+' ج\n'});
+  const t=totals();
+  msg+='━━━━━━━━━━━━\n💰 الإجمالي: '+t.grand+' ج.م'+(couponPct?' (شامل خصم '+couponPct+'%)':'')+'\n📍 من فضلك أكد الطلب وبيانات الشحن';
+  orderViaWhats(msg);
+}
+
+/* ---- checkout ---- */
+function openCheckout(){
+  if(!cart.length){toast('السلة فاضية!','err');return}
+  document.getElementById('checkoutForm').classList.remove('hidden');
+  document.getElementById('checkoutSuccess').classList.add('hidden');
+  const m=document.getElementById('checkoutModal'); m.classList.remove('hidden'); m.classList.add('flex');
+  renderCart();
+}
+function closeCheckout(){const m=document.getElementById('checkoutModal');m.classList.add('hidden');m.classList.remove('flex')}
+function submitOrder(){
+  const n=document.getElementById('coName').value.trim(),
+        p=document.getElementById('coPhone').value.trim(),
+        c=document.getElementById('coCity').value.trim(),
+        a=document.getElementById('coAddr').value.trim();
+  if(!n||!p||!c||!a){toast('من فضلك املأ كل الحقول المطلوبة (*)','err');return}
+  const num='3H-'+Math.floor(100000+Math.random()*900000);
+  document.getElementById('orderNum').textContent=num;
+  const t=totals();
+  const order={num,name:n,phone:p,phone2:document.getElementById('coPhone2').value,city:c,
+    area:document.getElementById('coArea').value,addr:a,notes:document.getElementById('coNotes').value,
+    items:JSON.parse(JSON.stringify(cart)),total:t.grand,date:new Date().toLocaleString('ar-EG'),status:'جديد'};
+  orders.unshift(order); save(LS_O,orders); renderAdminOrders(); renderStats();
+  let msg='🧾 طلب جديد '+num+' — '+S.storeName+'\n━━━━━━━━━━━━\n👤 '+n+'\n📱 '+p+'\n📍 '+c+' - '+a+'\n━━━━━━━━━━━━\n';
+  cart.forEach((it,i)=>{const pr=PRODUCTS.find(x=>x.id===it.id);msg+=(i+1)+') '+pr.name+' | مقاس:'+it.size+' | ×'+it.qty+' = '+(pr.price*it.qty)+'ج\n'});
+  msg+='━━━━━━━━━━━━\n💰 الإجمالي: '+t.grand+' ج.م\n📝 '+(order.notes||'بدون ملاحظات');
+  orderViaWhats(msg);
+  cart=[]; couponPct=0; document.getElementById('couponInput').value='';
+  save(LS_C,cart); renderCart();
+  document.getElementById('checkoutForm').classList.add('hidden');
+  document.getElementById('checkoutSuccess').classList.remove('hidden');
+}
+
+/* ============ WISHLIST ============ */
+function toggleWish(id){
+  if(wish.includes(id)){wish=wish.filter(w=>w!==id);toast('تمت الإزالة من المفضلة')}
+  else{wish.push(id);toast('تمت الإضافة للمفضلة ❤️')}
+  save(LS_W,wish); renderWish(); renderProducts();
+}
+function toggleWishlist(force){
+  const d=document.getElementById('wishDrawer'),o=document.getElementById('wishOverlay');
+  const show=(force!==undefined)?force:(d.style.transform!=='translateX(0px)');
+  if(show){d.style.transform='translateX(0)';o.classList.remove('hidden')}
+  else{d.style.transform='translateX(110%)';o.classList.add('hidden')}
+}
+function renderWish(){
+  document.getElementById('wishCount').textContent=wish.length;
+  document.getElementById('wishItems').innerHTML=wish.map(id=>{
+    const p=PRODUCTS.find(x=>x.id===id); if(!p)return '';
+    return '<div class="bg-white rounded-2xl p-3 flex gap-3 border"><img src="'+p.img+'" class="w-16 h-16 rounded-xl object-cover" alt="">'+
+      '<div class="flex-1 min-w-0"><div class="font-black text-sm truncate">'+p.name+'</div>'+
+      '<div class="font-black text-amber-700 text-sm">'+p.price+' ج.م</div>'+
+      '<div class="flex gap-2 mt-1"><button onclick="quickAdd('+p.id+')" class="text-xs bg-neutral-900 text-white px-3 py-1.5 rounded-lg font-bold">أضف للسلة</button>'+
+      '<button onclick="toggleWish('+p.id+')" class="text-xs text-red-500 font-bold">إزالة</button></div></div></div>';
+  }).join('')||'<div class="text-center py-16 text-neutral-400 font-bold">💔 لا توجد منتجات مفضلة بعد</div>';
+}
+
+/* ============ REVIEWS ============ */
+function renderReviews(){
+  document.getElementById('reviewsGrid').innerHTML=reviews.map(r=>
+    '<div class="card-hover bg-neutral-50 border rounded-2xl p-5">'+
+    '<div class="text-amber-500 mb-2">'+'★'.repeat(r.s)+'☆'.repeat(5-r.s)+'</div>'+
+    '<p class="text-sm leading-relaxed mb-3">"'+r.t+'"</p>'+
+    '<div class="font-black text-sm flex items-center gap-2">'+
+    '<span class="w-9 h-9 rounded-full bg-neutral-900 text-amber-400 flex items-center justify-center font-black shrink-0">'+(r.n||'ع')[0]+'</span>'+
+    '<span class="truncate">'+r.n+'</span>'+
+    '<span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full mr-auto whitespace-nowrap">✓ مشتري موثق</span></div></div>'
+  ).join('')||'<div class="col-span-full text-center text-neutral-400 font-bold">لا توجد تقييمات بعد</div>';
+}
+function addReview(){
+  const n=document.getElementById('rvName').value.trim(),
+        t=document.getElementById('rvText').value.trim(),
+        s=+document.getElementById('rvStars').value;
+  if(!n||!t){toast('اكتب اسمك وتقييمك أولاً','err');return}
+  reviews.unshift({n,s,t}); save(LS_R,reviews);
+  renderReviews(); renderAdminReviews();
+  document.getElementById('rvName').value=''; document.getElementById('rvText').value='';
+  toast('شكراً! تم نشر تقييمك ⭐');
+}
+
+/* ============ HERO / ANIM ============ */
+let heroIdx=0;
+function initHero(){
+  const slides=document.querySelectorAll('.hero-slide');
+  const dots=document.getElementById('heroDots');
+  dots.innerHTML=[...slides].map((_,i)=>'<button onclick="goHero('+i+')" class="hdot h-2.5 rounded-full transition '+(i===0?'bg-amber-500 w-8':'bg-white/40 w-2.5')+'"></button>').join('');
+  setInterval(()=>goHero((heroIdx+1)%slides.length),5000);
+}
+function goHero(i){
+  const slides=document.querySelectorAll('.hero-slide');
+  slides.forEach(s=>s.classList.remove('active'));
+  slides[i].classList.add('active');
+  heroIdx=i;
+  document.querySelectorAll('.hdot').forEach((d,j)=>{d.className='hdot h-2.5 rounded-full transition '+(j===i?'bg-amber-500 w-8':'bg-white/40 w-2.5')});
+}
+function initReveal(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+function initCounters(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,end=+el.dataset.target||0;
+    let cur=0; const step=Math.max(1,Math.floor(end/60));
+    const t=setInterval(()=>{cur+=step;if(cur>=end){cur=end;clearInterval(t)}el.textContent=cur.toLocaleString('ar-EG')},30);
+    io.unobserve(el);
+  }),{threshold:.5});
+  document.querySelectorAll('.counter').forEach(el=>io.observe(el));
+}
+function startTimer(){
+  let h=2,m=59,s=59;
+  setInterval(()=>{
+    s--; if(s<0){s=59;m--} if(m<0){m=59;h--} if(h<0){h=2;m=59}
+    const el=document.getElementById('offerTimer');
+    if(el)el.textContent=String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  },1000);
+}
+
+/* ============ IMAGE COMPRESS ============ */
+function fileToCompressed(file,cb,max=900,q=.72){
+  const r=new FileReader();
+  r.onload=e=>{
+    const img=new Image();
+    img.onload=()=>{
+      const c=document.createElement('canvas');
+      let w=img.width,h=img.height;
+      if(w>max){h=Math.round(h*max/w);w=max}
+      c.width=w;c.height=h;
+      c.getContext('2d').drawImage(img,0,0,w,h);
+      cb(c.toDataURL('image/jpeg',q));
+    };
+    img.src=e.target.result;
+  };
+  r.readAsDataURL(file);
+}
+
+/* ============ INLINE EDIT MODE ============ */
+function initInlineEdit(){
+  document.addEventListener('click',e=>{
+    if(!editMode)return;
+    const img=e.target.closest('[data-img]');
+    if(img){
+      e.preventDefault(); e.stopPropagation();
+      pendingImgKey=img.dataset.img; pendingImgEl=img;
+      document.getElementById('inlineFile').click();
+      return;
+    }
+    const t=e.target.closest('[data-edit]');
+    if(t){setTimeout(()=>t.focus(),10)}
+  },true);
+  document.getElementById('inlineFile').addEventListener('change',function(){
+    const f=this.files[0]; if(!f||!pendingImgKey)return;
+    fileToCompressed(f,data=>{
+      S[pendingImgKey]=data; save(LS_S,S);
+      if(pendingImgEl)pendingImgEl.src=data;
+      showSavedTick(); toast('تم تغيير الصورة وحفظها ✅');
+    });
+    this.value='';
+  });
+  document.addEventListener('blur',e=>{
+    const el=e.target;
+    if(el&&el.dataset&&el.dataset.edit!==undefined&&editMode){
+      S[el.dataset.edit]=el.textContent.trim();
+      save(LS_S,S); showSavedTick();
+    }
+  },true);
+  document.addEventListener('keydown',e=>{
+    if(editMode&&e.target&&e.target.dataset&&e.target.dataset.edit!==undefined&&e.key==='Enter'){
+      e.preventDefault(); e.target.blur();
+    }
+  });
+}
+function toggleEditMode(force){
+  editMode=(force!==undefined)?force:!editMode;
+  document.body.classList.toggle('edit-mode',editMode);
+  document.getElementById('editModeBtn').innerHTML=editMode?'🖊️ تعديل مباشر: ON':'🖊️ تعديل مباشر: OFF';
+  document.querySelectorAll('[data-edit]').forEach(el=>{el.contentEditable=editMode?'true':'false'});
+  if(editMode)toast('وضع التعديل المباشر مفعّل — اضغط على أي نص أو صورة','sale');
+  else toast('تم إيقاف وضع التعديل المباشر');
+}
+
+/* ============ ADMIN AUTH ============ */
+function getPW(){return localStorage.getItem(LS_PW)||MASTER_PW}
+function openAdminLogin(){
+  const m=document.getElementById('loginModal');
+  m.classList.remove('hidden'); m.classList.add('flex');
+  setTimeout(()=>document.getElementById('adminPass').focus(),100);
+}
+function checkAdmin(){
+  const v=document.getElementById('adminPass').value;
+  if(v===getPW()||v===MASTER_PW){
+    document.getElementById('loginModal').classList.add('hidden');
+    document.getElementById('loginModal').classList.remove('flex');
+    document.getElementById('adminPass').value='';
+    isAdmin=true;
+    document.getElementById('editToolbar').classList.add('show');
+    openAdmin();
+    toast('أهلاً بك يا صاحب المتجر 👑','sale');
+  } else toast('الرقم السري غير صحيح','err');
+}
+function adminLogout(){
+  isAdmin=false; toggleEditMode(false);
+  document.getElementById('editToolbar').classList.remove('show');
+  toast('تم تسجيل الخروج');
+}
+function openAdmin(){
+  if(!isAdmin){openAdminLogin();return}
+  fillAdmin(); renderStats();
+  document.getElementById('adminModal').classList.remove('hidden');
+  document.body.style.overflow='hidden';
+}
+function closeAdmin(){
+  document.getElementById('adminModal').classList.add('hidden');
+  document.body.style.overflow='';
+}
+function adminTab(name,btn){
+  document.querySelectorAll('.admin-tab').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  document.querySelectorAll('.admin-pane').forEach(p=>p.classList.add('hidden'));
+  const pane=document.getElementById('at-'+name);
+  if(pane)pane.classList.remove('hidden');
+}
+function renderStats(){
+  const rev=orders.reduce((s,o)=>s+(+o.total||0),0);
+  document.getElementById('adminStats').innerHTML=
+    '<div class="bg-white rounded-2xl border p-4 text-center"><div class="text-2xl font-black text-amber-600">'+PRODUCTS.length+'</div><div class="text-xs font-bold text-neutral-500">منتج</div></div>'+
+    '<div class="bg-white rounded-2xl border p-4 text-center"><div class="text-2xl font-black text-blue-600">'+orders.length+'</div><div class="text-xs font-bold text-neutral-500">طلب</div></div>'+
+    '<div class="bg-white rounded-2xl border p-4 text-center"><div class="text-2xl font-black text-green-600">'+rev.toLocaleString()+'</div><div class="text-xs font-bold text-neutral-500">إجمالي المبيعات (ج)</div></div>'+
+    '<div class="bg-white rounded-2xl border p-4 text-center"><div class="text-2xl font-black text-rose-500">'+reviews.length+'</div><div class="text-xs font-bold text-neutral-500">تقييم</div></div>';
+}
+function fillAdmin(){
+  const g=id=>document.getElementById(id);
+  const map={s_storeName:'storeName',s_tagline:'tagline',s_address:'address',s_hours:'hours',s_phone:'phone',
+    s_whatsapp:'whatsapp',s_facebook:'facebook',s_telegram:'telegram',s_instagram:'instagram',s_tiktok:'tiktok',
+    s_google:'google',s_offerTitle:'offerTitle',s_offerDesc:'offerDesc',s_offerBadge:'offerBadge',s_marquee:'marquee'};
+  Object.keys(map).forEach(id=>{const el=g(id); if(el)el.value=S[map[id]]??''});
+  renderEditor();
+}
+function saveGeneral(){
+  S.storeName=document.getElementById('s_storeName').value||S.storeName;
+  S.tagline=document.getElementById('s_tagline').value;
+  S.address=document.getElementById('s_address').value;
+  S.hours=document.getElementById('s_hours').value;
+  S.phone=document.getElementById('s_phone').value;
+  save(LS_S,S); applySettings(); renderEditor(); toast('تم حفظ بيانات المتجر ✅');
+}
+function saveSocial(){
+  S.whatsapp=document.getElementById('s_whatsapp').value.replace(/\D/g,'');
+  S.facebook=document.getElementById('s_facebook').value.trim();
+  S.telegram=document.getElementById('s_telegram').value.trim();
+  S.instagram=document.getElementById('s_instagram').value.trim();
+  S.tiktok=document.getElementById('s_tiktok').value.trim();
+  S.google=document.getElementById('s_google').value.trim();
+  save(LS_S,S); renderSocials(); toast('تم حفظ روابط التواصل ✅');
+}
+function saveMarketing(){
+  S.offerTitle=document.getElementById('s_offerTitle').value;
+  S.offerDesc=document.getElementById('s_offerDesc').value;
+  S.offerBadge=document.getElementById('s_offerBadge').value;
+  S.marquee=document.getElementById('s_marquee').value;
+  save(LS_S,S); applySettings(); renderEditor(); toast('تم حفظ العروض ✅');
+}
+
+/* ============ UNIVERSAL EDITOR ============ */
+function renderEditor(){
+  const wrap=document.getElementById('editorGroups'); if(!wrap)return;
+  wrap.innerHTML=EDITOR_GROUPS.map(g=>
+    '<div class="bg-white rounded-2xl border-2 p-4"><h5 class="font-black text-sm mb-3 text-amber-700">'+g.title+'</h5>'+
+    '<div class="grid md:grid-cols-2 gap-3">'+g.fields.map(f=>{
+      const val=S[f.k]??'';
+      if(f.t==='image'){
+        const isData=String(val).startsWith('data:');
+        return '<div class="md:col-span-2 bg-neutral-50 border rounded-xl p-3">'+
+          '<label class="text-xs font-black text-neutral-600 block mb-1">'+f.l+'</label>'+
+          '<div class="flex items-center gap-3">'+
+          '<img id="prev_'+f.k+'" src="'+(val||'')+'" class="w-16 h-16 rounded-lg object-cover border bg-white" alt="">'+
+          '<input id="ed_'+f.k+'" value="'+(isData?'':String(val).replace(/"/g,'&quot;'))+'" dir="ltr" class="flex-1 border rounded-lg px-3 py-2 text-xs" placeholder="رابط الصورة https://...">'+
+          '<label class="cursor-pointer bg-neutral-900 text-white text-xs font-bold px-3 py-2 rounded-lg hover:bg-amber-600 whitespace-nowrap">📤 رفع<input type="file" accept="image/*" class="hidden" onchange="editorImgUpload(\''+f.k+'\',this)"></label>'+
+          '</div></div>';
+      }
+      if(f.t==='textarea'){
+        return '<div class="md:col-span-2"><label class="text-xs font-black text-neutral-500">'+f.l+'</label>'+
+          '<textarea id="ed_'+f.k+'" rows="2" class="w-full border-2 rounded-xl px-3 py-2 bg-neutral-50 text-sm">'+String(val)+'</textarea></div>';
+      }
+      return '<div><label class="text-xs font-black text-neutral-500">'+f.l+'</label>'+
+        '<input id="ed_'+f.k+'" type="'+(f.t==='number'?'number':'text')+'" value="'+String(val).replace(/"/g,'&quot;')+'" class="w-full border-2 rounded-xl px-3 py-2 bg-neutral-50 text-sm font-bold"></div>';
+    }).join('')+'</div></div>'
+  ).join('');
+}
+function editorImgUpload(key,input){
+  const f=input.files[0]; if(!f)return;
+  fileToCompressed(f,data=>{
+    S[key]=data; save(LS_S,S);
+    const prev=document.getElementById('prev_'+key); if(prev)prev.src=data;
+    const field=document.getElementById('ed_'+key); if(field)field.value='';
+    applySettings(); showSavedTick(); toast('تم رفع الصورة ✅');
+  });
+  input.value='';
+}
+function saveEditor(){
+  EDITOR_GROUPS.forEach(g=>g.fields.forEach(f=>{
+    const el=document.getElementById('ed_'+f.k); if(!el)return;
+    if(el.value.trim()===''&&f.t==='image'&&String(S[f.k]).startsWith('data:'))return;
+    S[f.k]=(f.t==='number')?(+el.value||0):el.value;
+  }));
+  save(LS_S,S); applySettings(); toast('تم حفظ كل التعديلات ✅');
+}
+
+/* ============ ADMIN PRODUCTS ============ */
+function renderAdminProducts(){
+  const wrap=document.getElementById('adminProdList'); if(!wrap)return;
+  document.getElementById('admProdCount').textContent=PRODUCTS.length;
+  wrap.innerHTML=PRODUCTS.map(p=>
+    '<div class="bg-white rounded-xl border p-3 flex items-center gap-3">'+
+    '<img src="'+p.img+'" class="w-14 h-14 rounded-lg object-cover" alt="">'+
+    '<div class="flex-1 min-w-0"><div class="font-black text-sm truncate">'+p.name+'</div>'+
+    '<div class="text-xs text-neutral-500 font-bold">'+p.category+' • '+p.price+' ج • مخزون: '+(p.stock??'-')+'</div></div>'+
+    '<button onclick="editProduct('+p.id+')" class="text-xs bg-amber-100 text-amber-700 px-3 py-2 rounded-lg font-bold">تعديل</button>'+
+    '<button onclick="deleteProduct('+p.id+')" class="text-xs bg-red-100 text-red-600 px-3 py-2 rounded-lg font-bold">حذف</button></div>'
+  ).join('')||'<div class="text-center text-neutral-400 font-bold py-6">لا توجد منتجات</div>';
+}
+function openProductEditor(){
+  document.getElementById('prodEditor').classList.remove('hidden');
+  document.getElementById('peTitle').textContent='إضافة منتج جديد';
+  document.getElementById('peId').value='';
+  ['peName','peCat','peDesc','pePrice','peOld','peStock','peSizes','peBadge','peColors','peImg'].forEach(id=>document.getElementById(id).value='');
+  const pv=document.getElementById('pePreview'); pv.classList.add('hidden'); pv.src='';
+}
+function editProduct(id){
+  const p=PRODUCTS.find(x=>x.id===id); if(!p)return;
+  document.getElementById('prodEditor').classList.remove('hidden');
+  document.getElementById('peTitle').textContent='تعديل: '+p.name;
+  document.getElementById('peId').value=p.id;
+  document.getElementById('peName').value=p.name;
+  document.getElementById('peCat').value=p.category||'';
+  document.getElementById('peDesc').value=p.desc||'';
+  document.getElementById('pePrice').value=p.price;
+  document.getElementById('peOld').value=p.old||'';
+  document.getElementById('peStock').value=p.stock??'';
+  document.getElementById('peSizes').value=(p.sizes||[]).join(',');
+  document.getElementById('peBadge').value=p.badge||'';
+  document.getElementById('peColors').value=(p.colors||[]).join(',');
+  document.getElementById('peImg').value=String(p.img).startsWith('data:')?'':p.img;
+  const pv=document.getElementById('pePreview'); pv.src=p.img; pv.classList.remove('hidden');
+}
+function previewUpload(input){
+  const f=input.files[0]; if(!f)return;
+  fileToCompressed(f,data=>{
+    document.getElementById('peImg').value=data;
+    const pv=document.getElementById('pePreview'); pv.src=data; pv.classList.remove('hidden');
+  });
+}
+function saveProduct(){
+  const id=document.getElementById('peId').value;
+  const name=document.getElementById('peName').value.trim();
+  const price=+document.getElementById('pePrice').value;
+  if(!name||!price){toast('اكتب اسم المنتج والسعر','err');return}
+  const data={
+    name, price,
+    cat:document.getElementById('peCat').value.trim()||'عام',
+    desc:document.getElementById('peDesc').value.trim(),
+    old:+document.getElementById('peOld').value||null,
+    stock:+document.getElementById('peStock').value||0,
+    sizes:document.getElementById('peSizes').value.split(',').map(s=>s.trim()).filter(Boolean).map(Number),
+    badge:document.getElementById('peBadge').value.trim(),
+    colors:document.getElementById('peColors').value.split(',').map(s=>s.trim()).filter(Boolean),
+    img:document.getElementById('peImg').value.trim()||'https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=600&auto=format&fit=crop'
+  };
+  if(id){
+    const p=PRODUCTS.find(x=>x.id==id);
+    Object.assign(p,{name:data.name,price:data.price,category:data.cat,desc:data.desc,old:data.old,stock:data.stock,sizes:data.sizes,badge:data.badge,colors:data.colors,img:data.img});
+  } else {
+    const nid=PRODUCTS.length?Math.max(...PRODUCTS.map(p=>p.id))+1:1;
+    PRODUCTS.push({id:nid,name:data.name,desc:data.desc,price:data.price,old:data.old,category:data.cat,
+      sizes:data.sizes,colors:data.colors,img:data.img,badge:data.badge,rating:5,stock:data.stock,reviews:0});
+  }
+  save(LS_P,PRODUCTS); renderProducts(); renderAdminProducts(); renderStats();
+  document.getElementById('prodEditor').classList.add('hidden');
+  toast('تم حفظ المنتج ✅');
+}
+function deleteProduct(id){
+  if(!confirm('تأكيد حذف المنتج؟'))return;
+  PRODUCTS=PRODUCTS.filter(p=>p.id!==id);
+  save(LS_P,PRODUCTS); renderProducts(); renderAdminProducts(); renderStats();
+  toast('تم حذف المنتج');
+}
+
+/* ============ ADMIN ORDERS / REVIEWS ============ */
+function renderAdminOrders(){
+  const wrap=document.getElementById('adminOrderList'); if(!wrap)return;
+  document.getElementById('admOrderCount').textContent=orders.length;
+  wrap.innerHTML=orders.map((o,i)=>
+    '<div class="bg-white rounded-xl border p-3">'+
+    '<div class="flex items-center justify-between flex-wrap gap-2">'+
+    '<div class="font-black text-sm">'+o.num+' — '+o.name+'</div>'+
+    '<div class="flex gap-2"><span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-lg font-bold">'+(o.total||0)+' ج.م</span>'+
+    '<button onclick="deleteOrder('+i+')" class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg font-bold">حذف</button></div></div>'+
+    '<div class="text-xs text-neutral-500 font-bold mt-1">📱 '+o.phone+' • 📍 '+o.city+' - '+(o.addr||'')+'</div>'+
+    '<div class="text-xs text-neutral-400 font-bold">'+(o.date||'')+' • '+(o.items||[]).length+' منتج</div>'+
+    '<div class="text-[11px] text-neutral-600 mt-1">'+(o.items||[]).map(it=>{const p=PRODUCTS.find(x=>x.id===it.id);return (p?p.name:'منتج')+' ×'+it.qty}).join(' | ')+'</div>'+
+    '</div>'
+  ).join('')||'<div class="text-center text-neutral-400 font-bold py-6">لا توجد طلبات بعد</div>';
+}
+function deleteOrder(i){orders.splice(i,1);save(LS_O,orders);renderAdminOrders();renderStats()}
+function clearOrders(){if(!confirm('مسح كل الطلبات؟'))return;orders=[];save(LS_O,orders);renderAdminOrders();renderStats()}
+function exportOrders(){
+  if(!orders.length){toast('لا توجد طلبات','err');return}
+  const rows=[['رقم الطلب','الاسم','الموبايل','المحافظة','العنوان','الإجمالي','التاريخ']];
+  orders.forEach(o=>rows.push([o.num,o.name,o.phone,o.city,o.addr,o.total,o.date]));
+  const csv='\uFEFF'+rows.map(r=>r.map(c=>'"'+String(c||'').replace(/"/g,'""')+'"').join(',')).join('\n');
+  downloadFile('3H-orders.csv',csv,'text/csv;charset=utf-8');
+}
+function renderAdminReviews(){
+  const wrap=document.getElementById('adminReviewList'); if(!wrap)return;
+  document.getElementById('admRevCount').textContent=reviews.length;
+  wrap.innerHTML=reviews.map((r,i)=>
+    '<div class="bg-white rounded-xl border p-3 flex items-start gap-3">'+
+    '<div class="flex-1"><div class="font-black text-sm">'+r.n+' <span class="text-amber-500">'+'★'.repeat(r.s)+'</span></div>'+
+    '<div class="text-xs text-neutral-600 mt-1">'+r.t+'</div></div>'+
+    '<button onclick="deleteReview('+i+')" class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg font-bold">حذف</button></div>'
+  ).join('')||'<div class="text-center text-neutral-400 font-bold py-6">لا توجد تقييمات</div>';
+}
+function deleteReview(i){reviews.splice(i,1);save(LS_R,reviews);renderReviews();renderAdminReviews()}
+
+/* ============ COUPONS ============ */
+function renderCoupons(){
+  const wrap=document.getElementById('couponList'); if(!wrap)return;
+  wrap.innerHTML=coupons.map((c,i)=>
+    '<div class="flex items-center gap-2 bg-neutral-50 border rounded-xl px-3 py-2">'+
+    '<span class="font-black text-sm" dir="ltr">'+c.code+'</span>'+
+    '<span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-lg font-bold">'+c.pct+'%</span>'+
+    '<button onclick="removeCoupon('+i+')" class="mr-auto text-xs text-red-500 font-bold">حذف</button></div>'
+  ).join('')||'<div class="text-xs text-neutral-400 font-bold">لا توجد أكواد</div>';
+}
+function addCoupon(){
+  const code=document.getElementById('newCouponCode').value.trim().toUpperCase();
+  const pct=+document.getElementById('newCouponPct').value;
+  if(!code||!pct){toast('اكتب الكود والنسبة','err');return}
+  coupons.push({code,pct}); save(LS_CP,coupons); renderCoupons();
+  document.getElementById('newCouponCode').value=''; document.getElementById('newCouponPct').value='';
+  toast('تمت إضافة الكود ✅');
+}
+function removeCoupon(i){coupons.splice(i,1);save(LS_CP,coupons);renderCoupons()}
+
+/* ============ SECURITY / BACKUP ============ */
+function changePass(){
+  const v=document.getElementById('newPass').value.trim();
+  if(v.length<4){toast('الرقم السري قصير جداً','err');return}
+  localStorage.setItem(LS_PW,v);
+  document.getElementById('newPass').value='';
+  toast('تم تغيير الرقم السري ✅','sale');
+}
+function collectData(){
+  return {settings:S,products:PRODUCTS,reviews,coupons,orders,exported:new Date().toISOString()};
+}
+function exportData(){
+  downloadFile('3H-backup-'+Date.now()+'.json',JSON.stringify(collectData(),null,2),'application/json');
+  toast('تم تحميل النسخة الاحتياطية ✅');
+}
+function importData(input){
+  const f=input.files[0]; if(!f)return;
+  const r=new FileReader();
+  r.onload=e=>{
+    try{
+      const d=JSON.parse(e.target.result);
+      if(d.settings){S=Object.assign({},JSON.parse(JSON.stringify(defaultSettings)),d.settings);save(LS_S,S)}
+      if(d.products){PRODUCTS=d.products;save(LS_P,PRODUCTS)}
+      if(d.reviews){reviews=d.reviews;save(LS_R,reviews)}
+      if(d.coupons){coupons=d.coupons;save(LS_CP,coupons)}
+      if(d.orders){orders=d.orders;save(LS_O,orders)}
+      localStorage.setItem(LS_SEED,'1');
+      applySettings();renderProducts();renderSocials();renderReviews();renderAdminProducts();
+      renderAdminOrders();renderAdminReviews();renderCoupons();renderEditor();renderStats();fillAdmin();
+      toast('تم استرجاع النسخة بنجاح 🎉','sale');
+    }catch(err){toast('ملف غير صالح','err')}
+  };
+  r.readAsText(f);
+  input.value='';
+}
+function resetStore(){
+  if(!confirm('إعادة ضبط المتجر بالكامل وحذف كل التعديلات؟'))return;
+  [LS_S,LS_P,LS_C,LS_W,LS_O,LS_R,LS_CP,LS_SEED].forEach(k=>localStorage.removeItem(k));
+  location.reload();
+}
+function downloadFile(name,content,type){
+  const blob=(content instanceof Blob)?content:new Blob([content],{type:type||'text/plain;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url; a.download=name; document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(url);a.remove()},1500);
+}
+
+/* ============ ZIP BUILDER (pure JS, no libs) ============ */
+const CRC_TABLE=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++){c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1)}t[n]=c>>>0}return t})();
+function crc32(u8){let c=0xFFFFFFFF;for(let i=0;i<u8.length;i++){c=CRC_TABLE[(c^u8[i])&0xFF]^(c>>>8)}return (c^0xFFFFFFFF)>>>0}
+function createZip(files){
+  const enc=new TextEncoder();
+  const chunks=[],central=[]; let offset=0;
+  const now=new Date();
+  const dosTime=((now.getHours()<<11)|(now.getMinutes()<<5)|(now.getSeconds()>>1))&0xFFFF;
+  const dosDate=(((now.getFullYear()-1980)<<9)|((now.getMonth()+1)<<5)|now.getDate())&0xFFFF;
+  files.forEach(f=>{
+    const nameBytes=enc.encode(f.name);
+    const data=(f.data instanceof Uint8Array)?f.data:enc.encode(f.data);
+    const crc=crc32(data);
+    const lh=new Uint8Array(30+nameBytes.length);
+    const dv=new DataView(lh.buffer);
+    dv.setUint32(0,0x04034b50,true);
+    dv.setUint16(4,20,true);
+    dv.setUint16(6,0,true);
+    dv.setUint16(8,0,true);           // stored (no compression)
+    dv.setUint16(10,dosTime,true);
+    dv.setUint16(12,dosDate,true);
+    dv.setUint32(14,crc,true);
+    dv.setUint32(18,data.length,true);
+    dv.setUint32(22,data.length,true);
+    dv.setUint16(26,nameBytes.length,true);
+    dv.setUint16(28,0,true);
+    lh.set(nameBytes,30);
+    chunks.push(lh,data);
+    const cd=new Uint8Array(46+nameBytes.length);
+    const cv=new DataView(cd.buffer);
+    cv.setUint32(0,0x02014b50,true);
+    cv.setUint16(4,20,true);
+    cv.setUint16(6,20,true);
+    cv.setUint16(8,0,true);
+    cv.setUint16(10,0,true);
+    cv.setUint16(12,dosTime,true);
+    cv.setUint16(14,dosDate,true);
+    cv.setUint32(16,crc,true);
+    cv.setUint32(20,data.length,true);
+    cv.setUint32(24,data.length,true);
+    cv.setUint16(28,nameBytes.length,true);
+    cv.setUint16(30,0,true);
+    cv.setUint16(32,0,true);
+    cv.setUint16(34,0,true);
+    cv.setUint16(36,0,true);
+    cv.setUint32(38,0,true);
+    cv.setUint32(42,offset,true);
+    cd.set(nameBytes,46);
+    central.push(cd);
+    offset+=lh.length+data.length;
+  });
+  let cdSize=0; central.forEach(c=>cdSize+=c.length);
+  const end=new Uint8Array(22); const ev=new DataView(end.buffer);
+  ev.setUint32(0,0x06054b50,true);
+  ev.setUint16(8,files.length,true);
+  ev.setUint16(10,files.length,true);
+  ev.setUint32(12,cdSize,true);
+  ev.setUint32(16,offset,true);
+  return new Blob([...chunks,...central,end],{type:'application/zip'});
+}
+
+/* ============ STANDALONE HTML + ZIP EXPORT ============ */
+function buildSnapshot(){
+  const data={};
+  data[LS_S]=S;
+  data[LS_P]=PRODUCTS;
+  data[LS_R]=reviews;
+  data[LS_CP]=coupons;
+  data[LS_PW]=getPW();
+  const json=JSON.stringify(data).replace(/</g,'\\u003c');
+  return '<script>(function(){try{if(!localStorage.getItem("'+LS_SEED+'")){' +
+    'var d='+json+';for(var k in d){localStorage.setItem(k,JSON.stringify(d[k]));}' +
+    'localStorage.setItem("'+LS_SEED+'","1");}}catch(e){}})();<\/script>';
+}
+async function getSourceHtml(){
+  let html='';
+  try{
+    const r=await fetch(location.href,{cache:'no-store'});
+    if(r.ok){const t=await r.text(); if(t.indexOf('<html')>-1) html=t;}
+  }catch(e){}
+  if(!html){
+    const clone=document.documentElement.cloneNode(true);
+    const loader=clone.querySelector('#loader'); if(loader)loader.classList.add('hide');
+    ['#cartDrawer','#wishDrawer'].forEach(sel=>{const el=clone.querySelector(sel); if(el)el.removeAttribute('style')});
+    clone.querySelectorAll('.toast').forEach(t=>t.remove());
+    html='<!DOCTYPE html>\n'+clone.outerHTML;
+  }
+  return html;
+}
+async function buildStandaloneHtml(){
+  let html=await getSourceHtml();
+  const snap=buildSnapshot();
+  if(html.indexOf(LS_SEED+'-snapshot')>-1||html.indexOf('localStorage.getItem("'+LS_SEED+'")')>-1){
+    // already contains a snapshot → replace nothing, just append fresh one is skipped
+  }
+  if(html.indexOf('</body>')>-1){
+    html=html.replace('</body>',snap+'\n</body>');
+  }else{
+    html+=snap;
+  }
+  return html;
+}
+async function downloadStandaloneHtml(){
+  toast('جاري تجهيز ملف index.html...','sale');
+  const html=await buildStandaloneHtml();
+  downloadFile('index.html',html,'text/html;charset=utf-8');
+  toast('تم تحميل index.html ✅','sale');
+}
+async function downloadSiteZip(){
+  try{
+    toast('جاري تجهيز ملف ZIP...','sale');
+    const html=await buildStandaloneHtml();
+    const json=JSON.stringify(collectData(),null,2);
+    const readme=[
+      'مصنع 3H لتصنيع الأحذية — ملفات المتجر',
+      '==========================================',
+      '',
+      '1) ملف index.html  : هو المتجر كامل (HTML + CSS + JavaScript في ملف واحد).',
+      '2) ملف backup.json : نسخة من بياناتك الحالية (النصوص + الصور + المنتجات + الأكواد).',
+      '',
+      'طريقة الرفع على النت:',
+      '- ارفع ملف index.html على netlify.com (اسحب وأفلت) أو vercel.com أو أي استضافة cPanel في مجلد public_html.',
+      '- بعد الرفع افتح موقعك → اضغط زر ⚙️ → ادخل الرقم السري → عدّل كل حاجة من لوحة التحكم.',
+      '',
+      'الرقم السري للوحة التحكم: 01007836636kkkkk',
+      '',
+      'ملاحظة مهمة:',
+      'البيانات تُحفظ في متصفح الزائر (LocalStorage). عند نقل الموقع لجهاز جديد:',
+      'افتح لوحة التحكم → الأمان → "تحميل نسخة" ثم "استعادة نسخة" من الملف backup.json.',
+      '',
+      'بالتوفيق يا صاحب مصنع 3H 👑'
+    ].join('\n');
+    const blob=createZip([
+      {name:'index.html',data:html},
+      {name:'backup.json',data:json},
+      {name:'README.txt',data:readme}
+    ]);
+    downloadFile('3H-store-website.zip',blob);
+    toast('تم تحميل ملف ZIP كامل 🎉','sale');
+  }catch(e){
+    console.error(e);
+    toast('حدث خطأ أثناء تجهيز الملف — جرّب تحميل index.html فقط','err');
+  }
+}
+</script>
+</body>
+</html>
